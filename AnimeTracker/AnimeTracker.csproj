@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\Anime\Add.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Anime\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Anime\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\Anime\Data\" />
+      <Folder Include="wwwroot\Admin\" />
+      <Folder Include="wwwroot\images\" />
+      <Folder Include="wwwroot\User\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Anime\Views\Shared\Error.cshtml" />
+      <AdditionalFiles Include="Areas\Anime\Views\Shared\_Layout.cshtml" />
+      <AdditionalFiles Include="Areas\Anime\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    </ItemGroup>
+
+</Project>

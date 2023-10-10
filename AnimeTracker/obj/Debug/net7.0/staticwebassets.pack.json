@@ -1,0 +1,1165 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/obj/Debug/net7.0/scopedcss/projectbundle/AnimeTracker.bundle.scp.css",
+      "PackagePath": "staticwebassets/AnimeTracker.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/.DS_Store"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/css/demo.css",
+      "PackagePath": "staticwebassets/Admin/assets/css/demo.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/avatars/1.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/avatars/1.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/avatars/5.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/avatars/5.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/avatars/6.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/avatars/6.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/avatars/7.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/avatars/7.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/backgrounds/18.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/backgrounds/18.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/1.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/11.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/11.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/12.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/12.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/13.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/13.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/17.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/17.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/18.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/18.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/19.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/19.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/2.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/2.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/20.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/20.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/3.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/3.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/4.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/4.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/5.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/5.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/elements/7.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/img/elements/7.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/favicon/favicon.ico",
+      "PackagePath": "staticwebassets/Admin/assets/img/favicon/favicon.ico"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/brands/asana.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/brands/asana.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/brands/behance.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/brands/behance.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/brands/dribbble.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/brands/dribbble.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/brands/facebook.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/brands/facebook.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/brands/github.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/brands/github.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/brands/google.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/brands/google.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/brands/instagram.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/brands/instagram.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/brands/mailchimp.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/brands/mailchimp.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/brands/slack.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/brands/slack.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/brands/twitter.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/brands/twitter.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/unicons/cc-primary.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/unicons/cc-primary.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/unicons/cc-success.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/unicons/cc-success.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/unicons/cc-warning.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/unicons/cc-warning.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/unicons/chart-success.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/unicons/chart-success.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/unicons/chart.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/unicons/chart.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/unicons/paypal.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/unicons/paypal.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/unicons/wallet-info.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/unicons/wallet-info.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/icons/unicons/wallet.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/icons/unicons/wallet.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/illustrations/girl-doing-yoga-light.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/illustrations/girl-doing-yoga-light.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/illustrations/man-with-laptop-light.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/illustrations/man-with-laptop-light.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/illustrations/page-misc-error-light.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/illustrations/page-misc-error-light.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/layouts/layout-container-light.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/layouts/layout-container-light.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/layouts/layout-fluid-light.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/layouts/layout-fluid-light.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/layouts/layout-without-menu-light.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/layouts/layout-without-menu-light.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/img/layouts/layout-without-navbar-light.png",
+      "PackagePath": "staticwebassets/Admin/assets/img/layouts/layout-without-navbar-light.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/js/config.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/config.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/js/dashboards-analytics.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/dashboards-analytics.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/js/extended-ui-perfect-scrollbar.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/extended-ui-perfect-scrollbar.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/js/form-basic-inputs.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/form-basic-inputs.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/js/main.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/main.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/js/pages-account-settings-account.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/pages-account-settings-account.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/js/ui-modals.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/ui-modals.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/js/ui-popover.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/ui-popover.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/js/ui-toasts.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/ui-toasts.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/css/core.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/css/core.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/css/pages/page-account-settings.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/css/pages/page-account-settings.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/css/pages/page-auth.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/css/pages/page-auth.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/css/pages/page-icons.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/css/pages/page-icons.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/css/pages/page-misc.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/css/pages/page-misc.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/css/theme-default.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/css/theme-default.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/fonts/boxicons.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/fonts/boxicons.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/fonts/boxicons/boxicons.eot",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/fonts/boxicons/boxicons.eot"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/fonts/boxicons/boxicons.svg",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/fonts/boxicons/boxicons.svg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/fonts/boxicons/boxicons.ttf",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/fonts/boxicons/boxicons.ttf"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/fonts/boxicons/boxicons.woff",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/fonts/boxicons/boxicons.woff"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/fonts/boxicons/boxicons.woff2",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/fonts/boxicons/boxicons.woff2"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/js/bootstrap.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/js/helpers.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/js/helpers.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/js/menu.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/js/menu.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/libs/apex-charts/apex-charts.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/libs/apex-charts/apex-charts.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/libs/apex-charts/apexcharts.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/libs/apex-charts/apexcharts.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/libs/highlight/highlight-github.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/libs/highlight/highlight-github.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/libs/highlight/highlight.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/libs/highlight/highlight.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/libs/highlight/highlight.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/libs/highlight/highlight.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/libs/jquery/jquery.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/libs/jquery/jquery.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/libs/masonry/masonry.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/libs/masonry/masonry.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/assets/vendor/libs/popper/popper.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendor/libs/popper/popper.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/fonts/boxicons.scss",
+      "PackagePath": "staticwebassets/Admin/fonts/boxicons.scss"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/js/bootstrap.js",
+      "PackagePath": "staticwebassets/Admin/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/js/helpers.js",
+      "PackagePath": "staticwebassets/Admin/js/helpers.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/js/menu.js",
+      "PackagePath": "staticwebassets/Admin/js/menu.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/libs/apex-charts/apex-charts.scss",
+      "PackagePath": "staticwebassets/Admin/libs/apex-charts/apex-charts.scss"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/libs/apex-charts/apexcharts.js",
+      "PackagePath": "staticwebassets/Admin/libs/apex-charts/apexcharts.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/libs/highlight/highlight-github.scss",
+      "PackagePath": "staticwebassets/Admin/libs/highlight/highlight-github.scss"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/libs/highlight/highlight.js",
+      "PackagePath": "staticwebassets/Admin/libs/highlight/highlight.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/libs/highlight/highlight.scss",
+      "PackagePath": "staticwebassets/Admin/libs/highlight/highlight.scss"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/libs/jquery/jquery.js",
+      "PackagePath": "staticwebassets/Admin/libs/jquery/jquery.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/libs/masonry/masonry.js",
+      "PackagePath": "staticwebassets/Admin/libs/masonry/masonry.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/libs/perfect-scrollbar/perfect-scrollbar.js",
+      "PackagePath": "staticwebassets/Admin/libs/perfect-scrollbar/perfect-scrollbar.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/libs/perfect-scrollbar/perfect-scrollbar.scss",
+      "PackagePath": "staticwebassets/Admin/libs/perfect-scrollbar/perfect-scrollbar.scss"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/Admin/libs/popper/popper.js",
+      "PackagePath": "staticwebassets/Admin/libs/popper/popper.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/Source/OwlCarousel2-2.3.4.zip",
+      "PackagePath": "staticwebassets/User/Source/OwlCarousel2-2.3.4.zip"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/Source/SlickNav-master.zip",
+      "PackagePath": "staticwebassets/User/Source/SlickNav-master.zip"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/Source/bootstrap-4.4.1-dist.zip",
+      "PackagePath": "staticwebassets/User/Source/bootstrap-4.4.1-dist.zip"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/Source/elegant_font.zip",
+      "PackagePath": "staticwebassets/User/Source/elegant_font.zip"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/Source/font-awesome-4.7.0.zip",
+      "PackagePath": "staticwebassets/User/Source/font-awesome-4.7.0.zip"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/Source/jquery-nice-select-1.1.0.zip",
+      "PackagePath": "staticwebassets/User/Source/jquery-nice-select-1.1.0.zip"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/Source/plyr-master.zip",
+      "PackagePath": "staticwebassets/User/Source/plyr-master.zip"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/Source/sass.zip",
+      "PackagePath": "staticwebassets/User/Source/sass.zip"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/User/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/css/elegant-icons.css",
+      "PackagePath": "staticwebassets/User/css/elegant-icons.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/css/font-awesome.min.css",
+      "PackagePath": "staticwebassets/User/css/font-awesome.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/css/nice-select.css",
+      "PackagePath": "staticwebassets/User/css/nice-select.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/css/owl.carousel.min.css",
+      "PackagePath": "staticwebassets/User/css/owl.carousel.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/css/plyr.css",
+      "PackagePath": "staticwebassets/User/css/plyr.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/css/slicknav.min.css",
+      "PackagePath": "staticwebassets/User/css/slicknav.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/css/style.css",
+      "PackagePath": "staticwebassets/User/css/style.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/fonts/ElegantIcons.eot",
+      "PackagePath": "staticwebassets/User/fonts/ElegantIcons.eot"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/fonts/ElegantIcons.svg",
+      "PackagePath": "staticwebassets/User/fonts/ElegantIcons.svg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/fonts/ElegantIcons.ttf",
+      "PackagePath": "staticwebassets/User/fonts/ElegantIcons.ttf"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/fonts/ElegantIcons.woff",
+      "PackagePath": "staticwebassets/User/fonts/ElegantIcons.woff"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/fonts/FontAwesome.otf",
+      "PackagePath": "staticwebassets/User/fonts/FontAwesome.otf"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/fonts/fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets/User/fonts/fontawesome-webfont.eot"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/fonts/fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets/User/fonts/fontawesome-webfont.svg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/fonts/fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets/User/fonts/fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/fonts/fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets/User/fonts/fontawesome-webfont.woff"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/fonts/fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets/User/fonts/fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/anime/details-pic.jpg",
+      "PackagePath": "staticwebassets/User/img/anime/details-pic.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/anime/review-1.jpg",
+      "PackagePath": "staticwebassets/User/img/anime/review-1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/anime/review-2.jpg",
+      "PackagePath": "staticwebassets/User/img/anime/review-2.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/anime/review-3.jpg",
+      "PackagePath": "staticwebassets/User/img/anime/review-3.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/anime/review-4.jpg",
+      "PackagePath": "staticwebassets/User/img/anime/review-4.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/anime/review-5.jpg",
+      "PackagePath": "staticwebassets/User/img/anime/review-5.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/anime/review-6.jpg",
+      "PackagePath": "staticwebassets/User/img/anime/review-6.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-1.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-10.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-10.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-11.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-11.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-12.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-12.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-2.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-2.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-3.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-3.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-4.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-4.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-5.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-5.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-6.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-6.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-7.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-7.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-8.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-8.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/blog-9.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/blog-9.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/details/bd-item-1.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/details/bd-item-1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/details/bd-item-2.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/details/bd-item-2.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/details/bd-item-3.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/details/bd-item-3.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/details/blog-details-pic.jpg",
+      "PackagePath": "staticwebassets/User/img/blog/details/blog-details-pic.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/details/comment-1.png",
+      "PackagePath": "staticwebassets/User/img/blog/details/comment-1.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/details/comment-2.png",
+      "PackagePath": "staticwebassets/User/img/blog/details/comment-2.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/blog/details/comment-3.png",
+      "PackagePath": "staticwebassets/User/img/blog/details/comment-3.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/hero/hero-1.jpg",
+      "PackagePath": "staticwebassets/User/img/hero/hero-1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/live/live-1.jpg",
+      "PackagePath": "staticwebassets/User/img/live/live-1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/live/live-2.jpg",
+      "PackagePath": "staticwebassets/User/img/live/live-2.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/live/live-3.jpg",
+      "PackagePath": "staticwebassets/User/img/live/live-3.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/live/live-4.jpg",
+      "PackagePath": "staticwebassets/User/img/live/live-4.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/live/live-5.jpg",
+      "PackagePath": "staticwebassets/User/img/live/live-5.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/live/live-6.jpg",
+      "PackagePath": "staticwebassets/User/img/live/live-6.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/logo.png",
+      "PackagePath": "staticwebassets/User/img/logo.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/normal-breadcrumb.jpg",
+      "PackagePath": "staticwebassets/User/img/normal-breadcrumb.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/popular/popular-1.jpg",
+      "PackagePath": "staticwebassets/User/img/popular/popular-1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/popular/popular-2.jpg",
+      "PackagePath": "staticwebassets/User/img/popular/popular-2.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/popular/popular-3.jpg",
+      "PackagePath": "staticwebassets/User/img/popular/popular-3.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/popular/popular-4.jpg",
+      "PackagePath": "staticwebassets/User/img/popular/popular-4.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/popular/popular-5.jpg",
+      "PackagePath": "staticwebassets/User/img/popular/popular-5.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/popular/popular-6.jpg",
+      "PackagePath": "staticwebassets/User/img/popular/popular-6.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/recent/recent-1.jpg",
+      "PackagePath": "staticwebassets/User/img/recent/recent-1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/recent/recent-2.jpg",
+      "PackagePath": "staticwebassets/User/img/recent/recent-2.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/recent/recent-3.jpg",
+      "PackagePath": "staticwebassets/User/img/recent/recent-3.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/recent/recent-4.jpg",
+      "PackagePath": "staticwebassets/User/img/recent/recent-4.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/recent/recent-5.jpg",
+      "PackagePath": "staticwebassets/User/img/recent/recent-5.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/recent/recent-6.jpg",
+      "PackagePath": "staticwebassets/User/img/recent/recent-6.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/sidebar/comment-1.jpg",
+      "PackagePath": "staticwebassets/User/img/sidebar/comment-1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/sidebar/comment-2.jpg",
+      "PackagePath": "staticwebassets/User/img/sidebar/comment-2.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/sidebar/comment-3.jpg",
+      "PackagePath": "staticwebassets/User/img/sidebar/comment-3.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/sidebar/comment-4.jpg",
+      "PackagePath": "staticwebassets/User/img/sidebar/comment-4.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/sidebar/tv-1.jpg",
+      "PackagePath": "staticwebassets/User/img/sidebar/tv-1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/sidebar/tv-2.jpg",
+      "PackagePath": "staticwebassets/User/img/sidebar/tv-2.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/sidebar/tv-3.jpg",
+      "PackagePath": "staticwebassets/User/img/sidebar/tv-3.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/sidebar/tv-4.jpg",
+      "PackagePath": "staticwebassets/User/img/sidebar/tv-4.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/sidebar/tv-5.jpg",
+      "PackagePath": "staticwebassets/User/img/sidebar/tv-5.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/trending/trend-1.jpg",
+      "PackagePath": "staticwebassets/User/img/trending/trend-1.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/trending/trend-2.jpg",
+      "PackagePath": "staticwebassets/User/img/trending/trend-2.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/trending/trend-3.jpg",
+      "PackagePath": "staticwebassets/User/img/trending/trend-3.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/trending/trend-4.jpg",
+      "PackagePath": "staticwebassets/User/img/trending/trend-4.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/trending/trend-5.jpg",
+      "PackagePath": "staticwebassets/User/img/trending/trend-5.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/img/trending/trend-6.jpg",
+      "PackagePath": "staticwebassets/User/img/trending/trend-6.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/User/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/js/jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets/User/js/jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/js/jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets/User/js/jquery.nice-select.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/js/jquery.slicknav.js",
+      "PackagePath": "staticwebassets/User/js/jquery.slicknav.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/js/main.js",
+      "PackagePath": "staticwebassets/User/js/main.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/js/mixitup.min.js",
+      "PackagePath": "staticwebassets/User/js/mixitup.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/js/owl.carousel.min.js",
+      "PackagePath": "staticwebassets/User/js/owl.carousel.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/js/player.js",
+      "PackagePath": "staticwebassets/User/js/player.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/videos/1.mp4",
+      "PackagePath": "staticwebassets/User/videos/1.mp4"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/User/videos/anime-watch.jpg",
+      "PackagePath": "staticwebassets/User/videos/anime-watch.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/0129f064-813e-4d4b-81f4-ba2351531e3f1693462204166.jpeg",
+      "PackagePath": "staticwebassets/images/0129f064-813e-4d4b-81f4-ba2351531e3f1693462204166.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/03e519e5-92a0-4e61-b5dd-b6e06a415fffDesktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/03e519e5-92a0-4e61-b5dd-b6e06a415fffDesktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/0668227a-fc25-416a-80a2-c404750afa65Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/0668227a-fc25-416a-80a2-c404750afa65Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/069f7e00-c5a4-4a56-aead-a096af203430photo-1606651973407-3df68220b7a7 (1).jpeg",
+      "PackagePath": "staticwebassets/images/069f7e00-c5a4-4a56-aead-a096af203430photo-1606651973407-3df68220b7a7 (1).jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/08347eb2-7e07-47d8-a2e5-197b889c4037Kakashi-Hatake-face-eyes.jpg",
+      "PackagePath": "staticwebassets/images/08347eb2-7e07-47d8-a2e5-197b889c4037Kakashi-Hatake-face-eyes.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/0b04844f-ffa0-412c-8920-cac6a8a6cd70black_clover_noelle_schoolgirl_by_onehoox_det4n1q-fullview.png",
+      "PackagePath": "staticwebassets/images/0b04844f-ffa0-412c-8920-cac6a8a6cd70black_clover_noelle_schoolgirl_by_onehoox_det4n1q-fullview.png"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/0fe036b3-dd9a-4df8-9013-093890b58d07Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/0fe036b3-dd9a-4df8-9013-093890b58d07Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/2476c560-ada5-4cca-9d67-1c6188ce2b67as.jpeg",
+      "PackagePath": "staticwebassets/images/2476c560-ada5-4cca-9d67-1c6188ce2b67as.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/27148dad-5b02-466d-984b-807962bdd46doriginal.jpg",
+      "PackagePath": "staticwebassets/images/27148dad-5b02-466d-984b-807962bdd46doriginal.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/2a80b3ff-f1e8-40a8-a79b-b3f7d1d836f0Kakashi-Hatake-face-eyes.jpg",
+      "PackagePath": "staticwebassets/images/2a80b3ff-f1e8-40a8-a79b-b3f7d1d836f0Kakashi-Hatake-face-eyes.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/2f9bb6c4-025d-434a-9d31-cd8d3796b17a1693462204166.jpeg",
+      "PackagePath": "staticwebassets/images/2f9bb6c4-025d-434a-9d31-cd8d3796b17a1693462204166.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/34d4370c-e117-4b59-9b53-963d6646ae2dDesktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/34d4370c-e117-4b59-9b53-963d6646ae2dDesktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/416c79c2-c21d-40e7-965b-715b95c81bc7as.jpeg",
+      "PackagePath": "staticwebassets/images/416c79c2-c21d-40e7-965b-715b95c81bc7as.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/45d269b4-b264-4543-9dc6-8f8c139255b3Kakashi-Hatake-face-eyes.jpg",
+      "PackagePath": "staticwebassets/images/45d269b4-b264-4543-9dc6-8f8c139255b3Kakashi-Hatake-face-eyes.jpg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/4c89ce88-9855-40e5-b663-2283f3072ff9Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/4c89ce88-9855-40e5-b663-2283f3072ff9Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/4da0cdc0-76aa-44be-847d-3282105204a8Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/4da0cdc0-76aa-44be-847d-3282105204a8Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/4e95d7e8-f8b9-4b04-a93c-cae64db91963Naruto.jpeg",
+      "PackagePath": "staticwebassets/images/4e95d7e8-f8b9-4b04-a93c-cae64db91963Naruto.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/5b1d1f4a-df4b-42a9-8981-05270aeb8bf4Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/5b1d1f4a-df4b-42a9-8981-05270aeb8bf4Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/6310a7b0-1361-4cf1-b632-b8c46394f9be1693462204166.jpeg",
+      "PackagePath": "staticwebassets/images/6310a7b0-1361-4cf1-b632-b8c46394f9be1693462204166.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/6c8823c8-7801-43cd-81bd-6ca006e2c29cas.jpeg",
+      "PackagePath": "staticwebassets/images/6c8823c8-7801-43cd-81bd-6ca006e2c29cas.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/7072d25e-a1c2-46f2-8ad1-d5927baf8fbaas.jpeg",
+      "PackagePath": "staticwebassets/images/7072d25e-a1c2-46f2-8ad1-d5927baf8fbaas.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/75fc18eb-05be-47a3-b1b9-4e535f9b21d8as.jpeg",
+      "PackagePath": "staticwebassets/images/75fc18eb-05be-47a3-b1b9-4e535f9b21d8as.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/834c7013-ffe3-478f-bb5d-ee87df62e688Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/834c7013-ffe3-478f-bb5d-ee87df62e688Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/875b23f8-44c3-4c4b-9e3c-9f9b9d4e984fDesktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/875b23f8-44c3-4c4b-9e3c-9f9b9d4e984fDesktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/91e13967-a149-4247-b302-926a9897c1b2as.jpeg",
+      "PackagePath": "staticwebassets/images/91e13967-a149-4247-b302-926a9897c1b2as.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/ad789733-4619-44fc-9869-850c2cc017171693462204166.jpeg",
+      "PackagePath": "staticwebassets/images/ad789733-4619-44fc-9869-850c2cc017171693462204166.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/af7289d8-d3ab-433c-b6e7-60c4f7fe3cfeas.jpeg",
+      "PackagePath": "staticwebassets/images/af7289d8-d3ab-433c-b6e7-60c4f7fe3cfeas.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/bb80081d-23bc-4b61-9043-6281a3069d79Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/bb80081d-23bc-4b61-9043-6281a3069d79Desktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/c1abb4c5-3df0-402d-9e7c-15b8d6d8715cDesktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg",
+      "PackagePath": "staticwebassets/images/c1abb4c5-3df0-402d-9e7c-15b8d6d8715cDesktop Wallpaper Kakashi Hatake, Naruto, Naruto Shippuden, Face, Eyes, 4k, Hd Image, Picture, Background, Fc828e.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/e113ec8c-07c3-4ada-9436-6b9e0b33f6c2as.jpeg",
+      "PackagePath": "staticwebassets/images/e113ec8c-07c3-4ada-9436-6b9e0b33f6c2as.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/e2ff1422-b117-4a05-84b2-e8192a3f23e4as.jpeg",
+      "PackagePath": "staticwebassets/images/e2ff1422-b117-4a05-84b2-e8192a3f23e4as.jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/ed9409c9-e8c7-422c-917c-d63b044aa9b1photo-1606651973407-3df68220b7a7 (1).jpeg",
+      "PackagePath": "staticwebassets/images/ed9409c9-e8c7-422c-917c-d63b044aa9b1photo-1606651973407-3df68220b7a7 (1).jpeg"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.AnimeTracker.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.AnimeTracker.props",
+      "PackagePath": "build\\AnimeTracker.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.AnimeTracker.props",
+      "PackagePath": "buildMultiTargeting\\AnimeTracker.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.AnimeTracker.props",
+      "PackagePath": "buildTransitive\\AnimeTracker.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,33 @@
+
+@{
+    Layout = "_Layout";
+}
+
+@model AnimeTracker.Areas.Anime.Models.UpdateAnimevm
+
+
+
+<div class="m-5" id="exampleModal">
+    <form method="post" asp-area="Anime" asp-controller="Home" asp-action="Update" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" asp-for="Name" />
+        </div>
+        
+          <select class="form-control" asp-for="CategoryId" multiple>
+                    @foreach (var category in Model.CategoryList)
+                    {
+                        <option value="@category.Value">@category.Text</option>
+                    }
+                </select>
+        
+     
+        <div class="mb-3">
+            <label for="imageFile" class="form-label">Image</label>
+            <input type="file" class="form-control" id="imageFile" name="ImageFile" />
+        </div>
+        <input type="submit" />
+    </form>
+</div>
+
+

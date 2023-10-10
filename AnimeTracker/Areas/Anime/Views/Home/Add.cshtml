@@ -1,0 +1,30 @@
+@model AnimeTracker.Areas.Anime.Models.Animevm
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="m-5" id="exampleModal">
+    <form method="post" asp-area="Anime" asp-controller="Home" asp-action="Add" enctype="multipart/form-data">
+     
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" asp-for="Name"/>
+        </div>
+         <div class="form-group">
+                <label for="CategoryId">Category:</label>
+                <select class="form-control" id="CategoryId" name="CategoryId" asp-for="CategoryId" asp-items="Model.CategoryList" multiple>
+                    <option value="">Select a category...</option>
+                </select>
+            </div>
+                    <div class="mb-3">
+                        <label for="imageFile" class="form-label">Image</label>
+                        <input type="file" class="form-control" id="imageFile" name="ImageFile"/>
+                    </div>
+                    <input type="submit"/>
+        }
+      
+    </form>
+</div>
+
+
