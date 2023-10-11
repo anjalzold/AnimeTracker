@@ -11,7 +11,7 @@ namespace AnimeTracker.Models
 
         [Required] public string Name { get; set; }
 
-        public string ImageFileName { get; set; }
+        public string? ImageFileName { get; set; }
 
         
         public virtual List<AnimeCategory> AnimeCategories { get; set; }

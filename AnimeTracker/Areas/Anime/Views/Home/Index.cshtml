@@ -1,4 +1,4 @@
-@model List<Anime>
+@model List<AnimeTracker.Areas.Anime.Models.Animevm>
 @{
     Layout = "_Layout";
 }
@@ -21,22 +21,17 @@
             {
                 <tr>
                     <td class="w-25 h-50">
-                        @if (anime != null && !string.IsNullOrEmpty(anime.ImageFileName))
-                        {
+                       
                             <img src="images/@anime.ImageFileName" class="img-fluid img-thumbnail w-100"/>
-                        }
+                        
                     </td>
                     <td>
-                        @if (anime != null && !string.IsNullOrEmpty(anime.Name))
-                        {
-                            @anime.Name
-                        }
+                        
+                            @anime.AnimeName
+                        
                     </td>
                     <td>
-                        @foreach (var a in anime.AnimeCategories)
-                        {
-                            @a.Category.Name
-                        }
+                       @anime.CategoryName
                     </td>
                     <td>
                         <div class="dropdown">

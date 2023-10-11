@@ -1,8 +1,25 @@
-@model TModel
-
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
 
-<h2>title</h2>
+@model List<AnimeTracker.Areas.Anime.Models.Animevm>
+
+<!-- Your HTML table structure -->
+<table>
+    <thead>
+        <tr>
+            <th>CatId</th>
+            <th>CategoryName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CatId</td>
+                <td>@item.CategoryName</td>
+            </tr>
+        }
+    </tbody>
+</table>

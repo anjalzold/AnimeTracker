@@ -30,10 +30,37 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Index()
     {
-        List<AnimeTracker.Models.Anime> a = _animeRepository.List();
+        var animelist = _animeRepository.List();
+        var categoryList = _categoryRepository.List();
+        var animevmList = new List<Animevm>();
+
+        foreach (var anime in animelist)
+        {
+            // var categoryName = anime.AnimeCategories
+            //     .Select(a => categoryList.FirstOrDefault(c => c.CategoryId == a.CategoryId)?.Name).ToList();
+
+            //
+            // var categoryName = anime.AnimeCategories
+            //     .Select(animeCategory =>
+            //         categoryList
+            //             .FirstOrDefault(categoryId => categoryId.CategoryId == animeCategory.CategoryId)?.Name)
+            //     .ToList();
+
+            var categoryName = anime.AnimeCategories
+                .Select(animeCat => categoryList.FirstOrDefault(catId => catId.CategoryId == animeCat.CategoryId)?.Name)
+                .ToList();
+            var animevm = new Animevm
+            {
+                AnimeId = anime.AnimeId,
+                AnimeName = anime.Name,
+                ImageFileName = anime.ImageFileName,
+                CategoryName = string.Join(",", categoryName)
+            };
+            animevmList.Add(animevm);
+        }
 
 
-        return View(a);
+        return View(animevmList);
     }
 
     // public SelectList GetCategoryOptions()
@@ -64,12 +91,12 @@ public class HomeController : Controller
 
 
     //POST
-    public IActionResult Add(Animevm vm, IFormFile imageFile)
+    public IActionResult Add(Animevm vm, IFormFile ImageFile)
     {
-        if (imageFile != null && imageFile.Length > 0)
+        if (ImageFile != null && ImageFile.Length > 0)
         {
             string imagePath = "images";
-            string uniqueFileName = _fileHelper.SaveFileAndReturnName(imagePath, imageFile);
+            string uniqueFileName = _fileHelper.SaveFileAndReturnName(imagePath, ImageFile);
             vm.ImageFileName = uniqueFileName;
         }
 
@@ -99,6 +126,8 @@ public class HomeController : Controller
             return NotFound();
         }
 
+        _fileHelper.Delete("images", entity.ImageFileName);
+
         _animeRepository.Delete(entity);
         return RedirectToAction("Index");
     }
@@ -113,19 +142,19 @@ public class HomeController : Controller
             return NotFound();
         }
 
-        List<Category> categories = _categoryRepository.List();
+        var categories = _categoryRepository.List();
 
         var animeCategories = entity.AnimeCategories != null
             ? entity.AnimeCategories.Select(ac => ac.CategoryId).ToList()
-            : new List<Guid>(); 
+            : new List<Guid>();
 
 
         var anime = new UpdateAnimevm
         {
             CategoryList = new SelectList(categories, "CategoryId", "Name"),
-            Name = entity.Name,
+            AnimeName = entity.Name,
+            Image = entity.ImageFileName,
             CategoryId = animeCategories
-            
         };
 
         return View(anime);
@@ -134,45 +163,51 @@ public class HomeController : Controller
     [HttpPost]
 
     //POST
-    public IActionResult Update(UpdateAnimevm vm, Guid id, IFormFile imageFile)
+    public IActionResult Update(UpdateAnimevm vm, Guid id, IFormFile ImageFile)
     {
-
         var entity = _animeRepository.Find(id);
-        if (entity ==null)
+        if (entity == null)
         {
             return NotFound();
-
         }
-        
-        if (imageFile != null && imageFile.Length > 0)
+
+        if (ImageFile != null && ImageFile.Length > 0)
         {
             string imagePath = "images";
-            string uniqueFileName = _fileHelper.SaveFileAndReturnName(imagePath, imageFile);
+            _fileHelper.Delete(imagePath, entity.ImageFileName);
+            string uniqueFileName = _fileHelper.SaveFileAndReturnName(imagePath, ImageFile);
             vm.Image = uniqueFileName;
         }
 
-        entity.Name = vm.Name;
 
-        if (imageFile == null)
+        if (vm.AnimeName != null)
         {
-            vm.Image = entity.ImageFileName;
+            entity.Name = vm.AnimeName;
         }
-        entity.ImageFileName = vm.Image;
-        entity.AnimeCategories = new List<AnimeCategory>();
 
-        
-        foreach (var categoryId in vm.CategoryId)
+        if (vm.Image != null)
         {
-            entity.AnimeCategories.Add(new AnimeCategory
+            entity.ImageFileName = vm.Image;
+        }
+
+
+        if (vm.CategoryId != null)
+        {
+            entity.AnimeCategories = new List<AnimeCategory>();
+
+            foreach (var categoryId in vm.CategoryId)
             {
-                AnimeId = vm.AnimeId,
-                CategoryId = categoryId
-            });
-            
+                entity.AnimeCategories.Add(new AnimeCategory
+                {
+                    AnimeId = vm.AnimeId,
+                    CategoryId = categoryId
+                });
+            }
         }
 
         _animeRepository.Update(entity);
-        
+
+
         // var entity = _animeRepository.Find(id);
         // if (entity == null)
         // {
@@ -191,31 +226,7 @@ public class HomeController : Controller
         //     
         //     
         // }
-   
 
-
-        // if (imageFile != null && imageFile.Length > 0)
-        // {
-        //     string imagePath = "images";
-        //     string uniqueFileName = _fileHelper.SaveFileAndReturnName(imagePath, imageFile);
-        //     entity.Anime.ImageFileName = uniqueFileName;
-        // }
-        //
-        // if (vm.AnimeCategory != null)
-        // {
-        //     if (vm.AnimeCategory.Anime != null)
-        //     {
-        //         entity.Anime.Name = vm.AnimeCategory.Anime.Name;
-        //     }
-        //
-        //     if (vm.AnimeCategory.Category != null)
-        //     {
-        //         entity.Category.Name = vm.AnimeCategory.Category.Name;
-        //     }
-        // }
-        //
-        //
-        // _animeCategory.Update(entity);
 
         return RedirectToAction("Index");
     }
@@ -234,6 +245,41 @@ public class HomeController : Controller
             Name = cm.CategoryName
         };
         _categoryRepository.Insert(vm);
+
+        return RedirectToAction("Index");
+    }
+
+    [HttpGet]
+    public IActionResult GetCategory()
+    {
+        var categories = _categoryRepository.List();
+
+        // Create an Animevm instance to hold the categories
+
+        var category = new List<Animevm>();
+        foreach (var categorys in categories)
+        {
+            var categoryName = categorys.Name;
+            var categoryId = categorys.CategoryId;
+            var animeCategory = new Animevm
+            {
+                CategoryName = categoryName,
+                CatId = categoryId
+            };
+            category.Add(animeCategory);
+        }
+
+        return View(category);
+    }
+
+
+    public IActionResult DeleteCategory(Guid id)
+    {
+        var catgeoryID = _categoryRepository.Find(id);
+        if (catgeoryID != null)
+        {
+            _categoryRepository.Delete(catgeoryID);
+        }
 
         return RedirectToAction("Index");
     }

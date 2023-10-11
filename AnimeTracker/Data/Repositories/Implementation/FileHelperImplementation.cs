@@ -33,7 +33,7 @@ public class FileHelperImplementation : IFileHelper
                 return null;
             }
         }
-        public bool Delete(string path, string filename)
+        public bool Delete(string path, string? filename)
         {
             try
             {

@@ -18,11 +18,15 @@ void ConfigureServices(IServiceCollection services)
     services.AddControllersWithViews().AddRazorRuntimeCompilation();
     RegisterElements(services);
 }
+
+
 //--------------------------------------------------------------------------------------
 
 //--------------------------[ Register Elements Here ]---------------------------------- 
 void RegisterElements(IServiceCollection services)
 {
+
+ 
     AddDbContext(services);
     RegisterRepositories(services);
 }

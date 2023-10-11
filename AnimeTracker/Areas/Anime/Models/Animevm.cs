@@ -13,13 +13,15 @@ public class Animevm
     
     public string AnimeName { get; set; }
     
+    public Guid AnimeId { get; set; }
+    
     public Guid CatId { get; set; }
 
     public string CategoryName { get; set; }
     
 
     
-    public string ImageFileName { get; set; }
+    public string? ImageFileName { get; set; }
     
     public SelectList CategoryList { get; set; }
 
