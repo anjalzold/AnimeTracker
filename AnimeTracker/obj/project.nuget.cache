@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jW3xJ6An3mcvsfTVB6PN8gt1Lf/Imvh1COD6xadwiuKEtfAEBb7jqVrTiMt8LBjXWrAPxqmhpl/LCinZglb3jg==",
+  "dgSpecHash": "SsxDTH/dBn2ZQNDGcp4CbGM+R2hh8gprpOTX2eAPyP+Wdgjh2t/bpWrZJatg8OnEfHCDxOw/rogsJr5eauhlsw==",
   "success": true,
   "projectFilePath": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/AnimeTracker.csproj",
   "expectedPackageFiles": [
+    "/Users/anjal/.nuget/packages/aspnetcorehero.toastnotification/1.1.0/aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
     "/Users/anjal/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/anjal/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
     "/Users/anjal/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",

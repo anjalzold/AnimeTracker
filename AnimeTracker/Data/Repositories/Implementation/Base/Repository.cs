@@ -1,28 +1,4 @@
-//+---------------------------------------------------------------------------------------------------+
-//|                                        Repository.cs                                              |
-//|                                    ======================                                         |
-//|                                  Author : Prashant Bhandari                                       |
-//+---------------------------------------------------------------------------------------------------+
-//| This is a C# implementation of a generic repository class that follows the repository pattern.    |
-//| The purpose of the class is to provide a set of CRUD (Create, Read, Update, Delete) operations    |
-//| that can be used to interact with a database table in a consistent and reusable way.              |
-//|                                                                                                   |
-//| The class is parameterized with a type parameter T that is constrained to be a reference type     |
-//| (class). This allows the class to work with any entity type that is mapped to the underlying      |
-//| database using Entity Framework.                                                                  |
-//|                                                                                                   |
-//| The class implements the IRepository<T> interface, which defines the contract for the             |
-//| repository operations. The interface includes methods for inserting, updating, deleting, and      |
-//| querying entities, as well as methods for counting and enumerating entities.                      |
-//|                                                                                                   |
-//| The Repository<T> class also implements the IDisposable interface, which allows the               |
-//| class to release any unmanaged resources it is holding when it is no longer needed. This is       |
-//| important for ensuring that database connections are properly closed and that any other resources |
-//| associated with the repository are cleaned up.                                                    |
-//|                                                                                                   |
-//| Overall, this class provides a simple and consistent way to interact with a database using the    |
-//| repository pattern, which can help to improve code quality and maintainability.                   |
-//+---------------------------------------------------------------------------------------------------+
+
 
 using AnimeTracker.Data.Repositories.Interface.Base;
 using Microsoft.EntityFrameworkCore;

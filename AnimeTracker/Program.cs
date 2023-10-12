@@ -4,19 +4,41 @@ using AnimeTracker.Data.Repositories.Implementation.Base;
 using AnimeTracker.Data.Repositories.Interface;
 using AnimeTracker.Data.Repositories.Interface.Base;
 using AnimeTracker.Models;
+using AspNetCoreHero.ToastNotification;
+using AspNetCoreHero.ToastNotification.Extensions;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
+
 
 ConfigureServices(builder.Services);
 
 //------------------------[ Add services to the container ]-----------------------------
 void ConfigureServices(IServiceCollection services)
 {
+    services.AddNotyf(config=> { config.DurationInSeconds = 10;config.IsDismissable = true;config.Position = NotyfPosition.BottomRight; });
     services.AddControllersWithViews().AddRazorRuntimeCompilation();
+    builder.Services.AddSession();
+
+    // services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    //     .AddCookie(
+    //         option =>
+    //         {
+    //             option.LoginPath = "/Home/Login";
+    //             option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+    //         }
+    //         
+    // )
+    // ;
+    
     RegisterElements(services);
+    
 }
 
 
@@ -53,6 +75,8 @@ void RegisterRepositories(IServiceCollection services)
     services.AddTransient<ICategoryRepository, CategoryRepository>();
     services.AddTransient<IFileHelper, FileHelperImplementation>();
     services.AddTransient<IAnimeCategory, AnimeCategoryRepository>();
+    services.AddTransient<IUsers, UserRepository>();
+
 
 
     
@@ -70,12 +94,18 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseNotyf();
+
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+// app.UseAuthentication();
 
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseSession();
 
 
 // app.MapControllerRoute(

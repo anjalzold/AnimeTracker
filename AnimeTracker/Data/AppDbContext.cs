@@ -16,6 +16,8 @@ public class AppDbContext:DbContext
     public DbSet<Category> Categories { get; set; }
     
     public DbSet<AnimeCategory> AnimeCategories { get; set; }
+    
+    public DbSet<Users> Users { get; set; }
 
     
 

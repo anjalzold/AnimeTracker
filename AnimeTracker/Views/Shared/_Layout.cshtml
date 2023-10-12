@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="~/User/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="~/User/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="~/User/css/style.css" type="text/css">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -37,8 +39,8 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="~/User/./index.html">
-                            <img src="img/logo.png" alt="">
+                        <a asp-controller="Home" asp-action="Index">
+                            <img src="User/img/logo.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -46,15 +48,15 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="~/User/./index.html">Homepage</a></li>
+                                <li class="active"><a asp-controller="Home" asp-action="Index">Homepage</a></li>
                                 <li><a href="~/User/./categories.html">Categories <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
                                         <li><a href="~/User/./categories.html">Categories</a></li>
                                         <li><a href="~/User/./anime-details.html">Anime Details</a></li>
                                         <li><a href="~/User/./anime-watching.html">Anime Watching</a></li>
                                         <li><a href="~/User/./blog-details.html">Blog Details</a></li>
-                                        <li><a href="~/User/./signup.html">Sign Up</a></li>
-                                        <li><a href="~/User/./login.html">Login</a></li>
+                                        <li><a asp-controller="Home" asp-action="SignUp">Sign Up</a></li>
+                                        <li><a asp-controller="Home" asp-action="Login">Login</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="~/User/./blog.html">Our Blog</a></li>
@@ -66,7 +68,7 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <a href="~/User/#" class="search-switch"><span class="icon_search"></span></a>
-                        <a href="~/User/./login.html"><span class="icon_profile"></span></a>
+                        <a asp-controller="Home" asp-action="Login"><span class="icon_profile"></span></a>
                     </div>
                 </div>
             </div>
@@ -74,7 +76,6 @@
         </div>
     </header>
     <!-- Header End -->
-
     <!-- Hero Section Begin -->
   @RenderBody()
 <!-- Product Section End -->
@@ -88,13 +89,13 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="~/User/./index.html"><img src="img/logo.png" alt=""></a>
+                    <a asp-controller="Home" asp-action="Index"><img src="User/img/logo.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href="~/User/./index.html">Homepage</a></li>
+                        <li class="active"><a asp-controller="Home" asp-action="Index">Homepage</a></li>
                         <li><a href="~/User/./categories.html">Categories</a></li>
                         <li><a href="~/User/./blog.html">Our Blog</a></li>
                         <li><a href="~/User/#">Contacts</a></li>
@@ -134,6 +135,7 @@
 <script src="~/User/js/main.js"></script>
 
 
+ @await Component.InvokeAsync("Notyf")
 </body>
 
 </html>

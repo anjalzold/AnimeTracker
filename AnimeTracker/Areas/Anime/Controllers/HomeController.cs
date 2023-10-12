@@ -2,14 +2,22 @@ using AnimeTracker.Areas.Anime.Models;
 using AnimeTracker.Controllers;
 using AnimeTracker.Data.Repositories.Interface;
 using AnimeTracker.Models;
+using AnimeTracker.Utils;
+using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AnimeTracker.Areas.Anime.Controllers;
 
 [Area("anime")]
+
+[Authentication]
+
 public class HomeController : Controller
 {
+    public INotyfService _notifyService { get; }
+
     private readonly IAnimeRepository _animeRepository;
     private readonly ICategoryRepository _categoryRepository;
     private readonly IFileHelper _fileHelper;
@@ -18,18 +26,20 @@ public class HomeController : Controller
 
     // GET
     public HomeController(IAnimeRepository animeRepository, ICategoryRepository categoryRepository,
-        IFileHelper fileHelper, IAnimeCategory animeCategory)
+        IFileHelper fileHelper, IAnimeCategory animeCategory,INotyfService notifyService)
     {
         _animeRepository = animeRepository;
         _categoryRepository = categoryRepository;
         _fileHelper = fileHelper;
         _animeCategory = animeCategory;
-    }
+        _notifyService = notifyService;
 
+    }
 
     [HttpGet]
     public IActionResult Index()
     {
+
         var animelist = _animeRepository.List();
         var categoryList = _categoryRepository.List();
         var animevmList = new List<Animevm>();
@@ -61,6 +71,7 @@ public class HomeController : Controller
 
 
         return View(animevmList);
+
     }
 
     // public SelectList GetCategoryOptions()
@@ -282,5 +293,13 @@ public class HomeController : Controller
         }
 
         return RedirectToAction("Index");
+    }
+    
+    
+    public ActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        HttpContext.Session.Remove("UserName");
+        return RedirectToAction("Login",new{area=""});
     }
 }
