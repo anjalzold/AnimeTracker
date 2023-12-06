@@ -12,15 +12,18 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimeTracker.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231012025754_pdrosddswssassddfsasasdsvssdsasdsdsdxddadssdsdhsssssssshdhssaassssdssdy")]
-    partial class pdrosddswssassddfsasasdsvssdsasdsdsdxddadssdsdhsssssssshdhssaassssdssdy
+    [Migration("20231127053742_InitialCreateeessaas")]
+    partial class InitialCreateeessaas
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.10")
+                .HasAnnotation("ProductVersion", "7.0.11")
+                .HasAnnotation("Proxies:ChangeTracking", false)
+                .HasAnnotation("Proxies:CheckEquality", false)
+                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -31,12 +34,31 @@ namespace AnimeTracker.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<double>("AverageRating")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Episode")
+                        .HasColumnType("int");
+
                     b.Property<string>("ImageFileName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TotalRatings")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ViewCount")
+                        .HasColumnType("int");
 
                     b.HasKey("AnimeId");
 
@@ -79,6 +101,55 @@ namespace AnimeTracker.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("AnimeTracker.Models.UserAnimeList", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Episode")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalRatings")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserAnimeLists");
+                });
+
+            modelBuilder.Entity("AnimeTracker.Models.UserAnimeStatus", b =>
+                {
+                    b.Property<Guid>("UserStatusID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AnimeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("StatusId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserAnimeListId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("UserStatusID");
+
+                    b.HasIndex("AnimeId");
+
+                    b.HasIndex("UserAnimeListId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserAnimeStatuss");
+                });
+
             modelBuilder.Entity("AnimeTracker.Models.Users", b =>
                 {
                     b.Property<Guid>("UserId")
@@ -86,6 +157,10 @@ namespace AnimeTracker.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -125,6 +200,33 @@ namespace AnimeTracker.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("AnimeTracker.Models.UserAnimeStatus", b =>
+                {
+                    b.HasOne("AnimeTracker.Models.Anime", "Anime")
+                        .WithMany()
+                        .HasForeignKey("AnimeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AnimeTracker.Models.UserAnimeList", "UserAnimeList")
+                        .WithMany("UserAnimeStatus")
+                        .HasForeignKey("UserAnimeListId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AnimeTracker.Models.Users", "Users")
+                        .WithMany("UserAnimeStatus")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Anime");
+
+                    b.Navigation("UserAnimeList");
+
+                    b.Navigation("Users");
+                });
+
             modelBuilder.Entity("AnimeTracker.Models.Anime", b =>
                 {
                     b.Navigation("AnimeCategories");
@@ -133,6 +235,16 @@ namespace AnimeTracker.Migrations
             modelBuilder.Entity("AnimeTracker.Models.Category", b =>
                 {
                     b.Navigation("AnimesCategories");
+                });
+
+            modelBuilder.Entity("AnimeTracker.Models.UserAnimeList", b =>
+                {
+                    b.Navigation("UserAnimeStatus");
+                });
+
+            modelBuilder.Entity("AnimeTracker.Models.Users", b =>
+                {
+                    b.Navigation("UserAnimeStatus");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,26 @@
+@model List<AnimeTracker.Areas.Anime.Models.Animevm>
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>Anime List for User</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Anime Name</th>
+            <!-- Add more table headers for additional properties if needed -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var anime in Model)
+        {
+            <tr>
+                <td>@anime.AnimeName</td>
+                <td>@anime.Episode</td>
+                <!-- Add more table cells for additional properties if needed -->
+            </tr>
+        }
+    </tbody>
+</table>

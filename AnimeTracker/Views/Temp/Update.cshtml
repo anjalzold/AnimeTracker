@@ -1,0 +1,25 @@
+@model IEnumerable<AnimeTracker.Areas.Anime.Models.Animevm>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+  @foreach (var a in Model)
+  {
+      <h1>@a.AnimeName</h1>
+      <img src="~/images/@a.ImageFileName"/>
+          @foreach (var ac in a.category)
+          {
+              <p>@ac</p>
+          }                                
+  }    
+</div>
+</body>
+</html>
