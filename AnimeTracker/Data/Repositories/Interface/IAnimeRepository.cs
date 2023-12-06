@@ -6,6 +6,7 @@ namespace AnimeTracker.Data.Repositories.Interface;
 
 public interface IAnimeRepository:IRepository<Anime>
 {
-    
-    
+
+    List<Anime> FindByName(string search,string type,string cate);
+
 }

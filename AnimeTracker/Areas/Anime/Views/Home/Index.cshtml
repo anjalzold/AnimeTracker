@@ -3,15 +3,86 @@
     Layout = "_Layout";
 }
 
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+
 <div>
 <div class="card m-5">
-    <h5 class="card-header">Table Basic</h5>
+    @* <h5 class="card-header"></h5> *@
     <div class="table-responsive text-nowrap">
         <table class="table table-image">
+
+
+
+
+   <div class="container filter-container mt-0 mb-2">
+    <form method="get" asp-area="Anime" asp-controller="Home" asp-action="Index" id="filterForm">
+        <div class="row align-items-end">
+            <!-- Search Field -->
+            <div class="col-lg-3 col-md-6">
+                <div class="form-group">
+                    <label for="searchField" class="text-white">Search</label>
+                    <input type="text" class="form-control" id="searchField" placeholder="Enter your search" name="search">
+                </div>
+            </div>
+
+            <!-- Genre Dropdown -->
+            <div class="col-lg-3 col-md-6">
+                <div class="form-group">
+                    <label for="genreDropdown" class="text-white">Genre</label>
+                    <select class="form-control" id="genreAnime" name="cate">
+                        <option value="">Select Genre</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Content Type Dropdown -->
+            <div class="col-lg-3 col-md-6">
+                <div class="form-group">
+                    <label for="contentTypeDropdown" class="text-white">Content Type</label>
+                    <select class="form-control" id="typeAnime" name="type">
+                        <option value="">Select Content Type</option>
+                        <option value="movie">Movie</option>
+                        <option value="anime">Anime</option>
+                        <option value="manga">Manga</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-lg-3 col-md-6">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
             <thead>
             <tr>
                 <th>Image</th>
-                <th>Name</th>
+        <th><a asp-area="Anime" asp-controller="Home" asp-action="Index" asp-route-sortOrder="name_asc">Name ▲</a>|                             
+            <a asp-area="Anime" asp-controller="Home" asp-action="Index" asp-route-sortOrder="name_desc">Name ▼</a>
+</th>
+
+                                <th><a asp-area="Anime" asp-controller="Home" asp-action="Index" asp-route-sortOrder="episode_asc">Episode ▲ </a> |
+                                <a asp-area="Anime" asp-controller="Home" asp-action="Index" asp-route-sortOrder="episode_desc">Episode ▼</a>
+                                </th>
+
+
                 <th>Category</th>
                 <th>Actions</th>
             </tr>
@@ -21,17 +92,18 @@
             {
                 <tr>
                     <td class="w-25 h-50">
-                       
-                            <img src="images/@anime.ImageFileName" class="img-fluid img-thumbnail w-100"/>
-                        
+
+                        <img src="images/@anime.ImageFileName" class="" style="object-fit: cover;" width="150" height="150"/>
+
                     </td>
                     <td>
-                        
-                            @anime.AnimeName
-                        
+
+                        @anime.AnimeName
+
                     </td>
+                    <td>@anime.Episode</td>
                     <td>
-                       @anime.CategoryName
+                        @anime.CategoryName
                     </td>
                     <td>
                         <div class="dropdown">
@@ -55,6 +127,17 @@
             }
             </tbody>
         </table>
+
+<div class="pagination">
+    <pager
+        asp-action="Index"
+        asp-controller="Home"
+       asp-route-page="@Model.FirstOrDefault()?.CurrentPage"
+        asp-route-totalPages="@Model.FirstOrDefault()?.TotalPages">
+    </pager>
+</div>
+
+   
     </div>
 </div>
 
@@ -590,3 +673,21 @@
 @* *@
 @*       </div> *@
 </div>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the last scroll position from localStorage
+        var lastScrollPosition = localStorage.getItem('lastScrollPosition');
+
+        // If a scroll position was previously saved, scroll to it
+        if (lastScrollPosition) {
+            window.scrollTo(0, lastScrollPosition);
+        }
+
+        // Save the scroll position when the user scrolls
+        window.addEventListener('scroll', function () {
+            localStorage.setItem('lastScrollPosition', window.scrollY);
+        });
+    });
+</script>

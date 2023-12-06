@@ -21,6 +21,17 @@ public class AnimeRepository:Repository<Anime>,IAnimeRepository
             .ThenInclude(a=>a.Category)
             .ToList();
     }
+    
+    public List<Anime> FindByName(string search,string type,string cat)
+    {
+        var results = _context.Animes.Where(a => a.Name.Contains(search) || a.Type.Contains(type) || a.AnimeCategories.Select(b=>b.Category.Name).Contains(cat)).ToList();
+
+        return results;
+
+    }
+    
+    
+    
 
   
  

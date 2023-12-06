@@ -1,7 +1,6 @@
-@model TModel
-
+@model IEnumerable<AnimeTracker.Areas.Anime.Models.Animevm>
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
 <!DOCTYPE html>
@@ -12,7 +11,42 @@
 </head>
 <body>
 <div>
-      
+    
+    <table >
+        <thead>
+        <tr>
+            <th>Anime</th>
+            <th>Image</th>
+            <th>Catgeory</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody> @foreach (var a in Model)
+                       {
+        <tr>
+            <td>@a.AnimeName</td>
+            <td class="w-25 h-25"><img src="~/images/@a.ImageFileName" class="img-responsive"/></td>
+            <td> @foreach (var ac in a.category)
+                 {
+                     <p>@ac</p>
+                 }</td>
+            <td>
+                                <a asp-controller="Temp" asp-action="TempForm" asp-route-id="@a.AnimeId">View</a>
+
+                <a asp-controller="Temp" asp-action="Delete" asp-route-id="@a.AnimeId">Delete</a>
+                <a asp-controller="Temp" asp-action="Update" asp-route-Id="@a.AnimeId">Update</a>
+            </td>
+        </tr>
+       
+            <h1></h1>
+            
+           
+        }
+
+        </tbody>
+ 
+        </table>
+
 </div>
 </body>
 </html>

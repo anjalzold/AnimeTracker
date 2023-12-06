@@ -1,0 +1,28 @@
+@model List<AnimeTracker.Areas.Anime.Models.Animevm>
+
+
+
+
+<div class="product__sidebar__comment mt-5">
+    <p class="text-white " style="font-size: 24px; font-weight: 800;">Top Rated</p>
+    @foreach (var animeinfo in Model.OrderByDescending(item => item.AverageRating))
+    {
+        <div class="product__sidebar__comment__item">
+            <div class="product__sidebar__comment__item__pic">
+                <img src="/images/@animeinfo.ImageFileName" class="" style="object-fit: cover" width="100px" height="100px"
+                    alt="">
+            </div>
+            <div class="product__sidebar__comment__item__text">
+                <ul>
+                    <li>@animeinfo.Type</li>
+                </ul>
+                <h5>
+                    <a asp-route-id="@animeinfo.AnimeId" asp-controller="Home" asp-action="AnimeDetail">@animeinfo.AnimeName
+                    </a>
+                </h5>
+                <span><i class="fa fa-star"></i> @Math.Round(@animeinfo.AverageRating, 2)</span>
+            </div>
+        </div>
+
+    }
+</div>

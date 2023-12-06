@@ -23,3 +23,21 @@
         }
     </tbody>
 </table>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the last scroll position from localStorage
+        var lastScrollPosition = localStorage.getItem('lastScrollPosition');
+
+        // If a scroll position was previously saved, scroll to it
+        if (lastScrollPosition) {
+            window.scrollTo(0, lastScrollPosition);
+        }
+
+        // Save the scroll position when the user scrolls
+        window.addEventListener('scroll', function () {
+            localStorage.setItem('lastScrollPosition', window.scrollY);
+        });
+    });
+</script>

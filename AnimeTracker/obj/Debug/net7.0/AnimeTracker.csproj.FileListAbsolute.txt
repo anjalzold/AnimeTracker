@@ -553,3 +553,5 @@
 /Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/obj/Debug/net7.0/scopedcss/Areas/Anime/Views/Shared/_Layout.cshtml.rz.scp.css
 /Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/bin/Debug/net7.0/AspNetCoreHero.ToastNotification.Views.dll
 /Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/bin/Debug/net7.0/AspNetCoreHero.ToastNotification.dll
+/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/bin/Debug/net7.0/Castle.Core.dll
+/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Proxies.dll

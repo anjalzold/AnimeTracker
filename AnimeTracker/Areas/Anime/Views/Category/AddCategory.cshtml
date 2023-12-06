@@ -5,7 +5,7 @@
 }
 
 <div>
- <form method="post" asp-area="Anime" asp-controller="Home" asp-action="AddCategory">
+ <form method="post" asp-area="Anime" asp-controller="Category" asp-action="AddCategory">
  <div class="mb-3 p-5">
      <label for="exampleFormControlInput1" class="form-label">Name</label>
      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Category Name" asp-for="CategoryName" />
@@ -99,7 +99,7 @@
                     class="btn btn-primary"
                     data-bs-toggle="modal"
                     data-bs-target="#modalCenter"
-                    asp-area="Anime" asp-controller="Home" asp-action="AddCategory">
+                    asp-area="Anime" asp-controller="Category" asp-action="AddCategory">
                     Add Category
                 </button>
 
@@ -116,7 +116,7 @@
                                     aria-label="Close">
                                 </button>
                             </div>
-                            <form method="post" asp-area="Anime" asp-controller="Home" asp-action="AddCategory">
+                            <form method="post" asp-area="Anime" asp-controller="Category" asp-action="AddCategory">
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col mb-3">

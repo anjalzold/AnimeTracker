@@ -1,109 +1,377 @@
-﻿@model List<AnimeTracker.Areas.Anime.Models.Animevm>
+﻿@* @model List<AnimeTracker.Areas.Anime.Models.Animevm> *@
+@* *@
+@* @{ *@
+@*     Layout = "_Layout"; *@
+@* } *@
+@* *@
+@* *@
+@* <div> *@
+@* *@
+@* <!-- Product Section Begin --> *@
+@* <section class="product spad"> *@
+@*     <div class="container"> *@
+@*         <div class="row"> *@
+@*             <div class="col-lg-8"> *@
+@*                 <div class="trending__product"> *@
+@*                     <div class="row"> *@
+@*                         <div class="col-lg-8 col-md-8 col-sm-8"> *@
+@*                             <div class="section-title"> *@
+@*                                 <h4>Trending Now</h4> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                         <div class="col-lg-4 col-md-4 col-sm-4"> *@
+@*                             <div class="btn__all"> *@
+@*                                 <a href="~/user/#" class="primary-btn">View All <span class="arrow_right"></span></a> *@
+@*                             </div> *@
+@*                         </div> *@
+@*                     </div> *@
+@*                     <div class="row"> *@
+@*                         @foreach (var anime in Model) *@
+@*                         { *@
+@*                             <div class="col-lg-4 col-md-6 col-sm-6"> *@
+@*                                 <div class="product__item"> *@
+@*                                     <div class="product__item__pic set-bg" data-setbg="images/@anime.ImageFileName"> *@
+@*                                         <div class="ep">18 / 18</div> *@
+@*                                         <div class="comment"><i class="fa fa-comments"></i> 11</div> *@
+@*                                         <div class="view"><i class="fa fa-eye"></i> 9141</div> *@
+@*                                     </div> *@
+@*                                     <div class="product__item__text"> *@
+@*                                         <ul> *@
+@*                                             <li>Active</li> *@
+@*                                             <li>Movie</li> *@
+@*                                         </ul> *@
+@*                                         <h5> *@
+@*                                             <a asp-route-id="@anime.AnimeId" asp-controller="Home" asp-action="AnimeDetail">@anime.AnimeName</a> *@
+@*                                         </h5> *@
+@*                                     </div> *@
+@*                                 </div> *@
+@*                             </div> *@
+@*                         } *@
+@* *@
+@*                     </div> *@
+@* *@
+@* *@
+@*                 </div> *@
+@*             </div> *@
+@*             <div class="product__sidebar__comment"> *@
+@*                 <div class="section-title"> *@
+@*                     <h5>New Comment</h5> *@
+@*                 </div> *@
+@*                 @foreach (var ani in Model) *@
+@*                 { *@
+@*                     <div class="product__sidebar__comment__item"> *@
+@*                         <div class="product__sidebar__comment__item__pic"> *@
+@*                             <img src="images/@ani.ImageFileName" width="200" height="200" class="product__sidebar__comment__item__pic" alt=""> *@
+@*                         </div> *@
+@*                         <div class="product__sidebar__comment__item__text"> *@
+@*                             <ul> *@
+@*                                 <li>Active</li> *@
+@*                                 <li>Movie</li> *@
+@*                             </ul> *@
+@*                             <h5> *@
+@*                                 <a asp-route-id="@ani.AnimeId" asp-controller="Home" asp-action="AnimeDetail">@ani.AnimeName</a> *@
+@*                             </h5> *@
+@*                             <span><i class="fa fa-eye"></i> 19.141 Viewes</span> *@
+@*                         </div> *@
+@*                     </div> *@
+@*                 } *@
+@*                  *@
+@*               *@
+@*               *@
+@*             </div> *@
+@*         </div> *@
+@*     </div> *@
+@* *@
+@* *@
+@* </section> *@
+
+@* </div> *@
+
+@model List<AnimeTracker.Areas.Anime.Models.Animevm>
 
 @{
     Layout = "_Layout";
 }
 
 
+<div asp-validation-summary="ModelOnly"></div>
 
-<div>
 
-       <!-- Product Section Begin -->
-         <section class="product spad">
-         <div class="container">
-             <div class="row">
-                 <div class="col-lg-8">
-                     <div class="trending__product">
-                         <div class="row">
-                             <div class="col-lg-8 col-md-8 col-sm-8">
-                                 <div class="section-title">
-                                     <h4>Trending Now</h4>
-                                 </div>
-                             </div>
-                             <div class="col-lg-4 col-md-4 col-sm-4">
-                                 <div class="btn__all">
-                                     <a href="~/user/#" class="primary-btn">View All <span class="arrow_right"></span></a>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="row">
-                             @foreach (var anime in Model)
-                             {
-                                 <div class="col-lg-4 col-md-6 col-sm-6">
-                                     <div class="product__item">
-                                         <div class="product__item__pic set-bg" data-setbg="images/@anime.ImageFileName">
-                                             <div class="ep">18 / 18</div>
-                                             <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                             <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                         </div>
-                                         <div class="product__item__text">
-                                             <ul>
-                                                 <li>Active</li>
-                                                 <li>Movie</li>
-                                             </ul>
-                                             <h5><a href="~/user/#">@anime.AnimeName</a></h5>
-                                         </div>
-                                     </div>
-                                 </div>
-                             }
-                           
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         </section>
+<section class="hero">
+    <partial name="_HeroPage" model="@Model"></partial>
 
 
 
 
+    @*     <div class="container"> *@
+    @*         <div class="hero__slider owl-carousel"     style="height: 600px!important;" *@
+    @* > *@
+    @*             @foreach (var ani in Model.Take(3)) *@
+    @*             { *@
+    @*                 <div class="hero__items set-bg" data-setbg="/images/@ani.ImageFileName" style="background-position: center;height: 600px"> *@
+    @*                     <div class="row"> *@
+    @*                         <div class="col-lg-6"> *@
+    @*                             <div class="hero__text"> *@
+    @*                                 @foreach (var a in ani.category) *@
+    @*                                 { *@
+    @*                                     <div class="label">@a</div> *@
+    @* *@
+    @*                                                      *@
+    @*                                 } *@
+    @*                                 <h2>@ani.AnimeName</h2> *@
+    @*                                 <p>@ani.Description</p> *@
+    @*                                 <a asp-route-id="@ani.AnimeId" asp-controller="Home" asp-action="AnimeDetail"><span>Read More</span> <i class="fa fa-angle-right"></i></a> *@
+    @*                             </div> *@
+    @*                         </div> *@
+    @*                     </div> *@
+    @*                 </div> *@
+    @*             } *@
+    @*             *@
+    @*         </div> *@
+    @*     </div> *@
+</section>
 
-      
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-lg-9">
+            <div class="container filter-container mt-5 ">
+                <form method="post" asp-controller="Home" asp-action="Index" id="filterForm">
+                    <div class="" style="display: grid; grid-template-columns: 200px 200px 200px 100px; column-gap: 20px;grid-template-rows: 100px ">
+                        <!-- Search Field -->
+                        <div style="display: flex; flex-direction: column">
+                            <label for="searchField" class="text-white">Search</label>
+                            <input type="text" class="form-control" id="searchField" placeholder="Enter your search" style="padding: 20px" name="search">
+                        </div>
+
+                        <!-- Genre Dropdown -->
+                        <div style="display: flex; flex-direction: column">
+                            <label for="genreDropdown" class="text-white">Genre</label>
+                            <select class="form-control" id="genreAnime" style="" name="cate">
+                                <option value="">Select Genre</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="comedy">Comedy</option>
+                                <option value="drama">Drama</option>
+                            </select>
+                        </div>
+
+                        <!-- Content Type Dropdown -->
+                        <div style="display: flex; flex-direction: column">
+                            <label for="contentTypeDropdown" class="text-white">Content Type</label>
+                            <select class="form-control" id="typeAnime" name="type">
+                                <option value="">Select Content Type</option>
+                                <option value="movie">Movie</option>
+                                <option value="anime">Anime</option>
+                                <option value="manga">Manga</option>
+                            </select>
+                        </div>
+                        <div style="display:flex;flex-direction: column;">
+                            <button type="submit" class="btn btn-primary" id="submitBtn" style="margin-top: 35px ">Submit</button>
+
+                        </div>
+
+
+                        <!-- Submit Button -->
+                    </div>
+                </form>
+            </div>
+
+
+            <section class="product spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="trending__product">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <div class="section-title">
+                                            <h4> Anime List</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    @foreach (var animeinfo in Model.Where(item => item.Type == "Anime"))
+                                    {
+                                        <div class="col-lg-4 col-md-6 col-sm-6">
+                                            <a asp-route-id="@animeinfo.AnimeId" asp-controller="Home" asp-action="AnimeDetail">
+
+                                                <div class="product__item">
+                                                    <div class="product__item__pic set-bg" data-setbg="images/@animeinfo.ImageFileName">
+                                                        <div class="ep">@animeinfo.Episode</div>
+                                                        @* <div class="comment"><i class="fa fa-comments"></i> 11</div> *@
+                                                        <div class="view">
+                                                            <i class="fa fa-eye"></i> @animeinfo.ViewCount
+                                                        </div>
+                                                    </div>
+                                                    <div class="product__item__text">
+                                                        <ul>
+                                                            <li>@animeinfo.Type</li>
+                                                        </ul>
+                                                        <h5>
+                                                            @animeinfo.AnimeName
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Create similar sections for manga and movies -->
+            <section class="product spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="trending__product">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <div class="section-title">
+                                            <h4> Manga List</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    @foreach (var mangaInfo in Model.Where(item => item.Type == "Manga"))
+                                    {
+                                        <div class="col-lg-4 col-md-6 col-sm-6">
+                                            <div class="product__item">
+                                                <div class="product__item__pic set-bg" data-setbg="/images/@mangaInfo.ImageFileName">
+                                                    <div class="ep">@mangaInfo.Episode</div>
+                                                    @* <div class="comment"><i class="fa fa-comments"></i> 11</div> *@
+                                                    <div class="view">
+                                                        <i class="fa fa-eye"></i> @mangaInfo.ViewCount
+                                                    </div>
+                                                </div>
+                                                <div class="product__item__text">
+                                                    <ul>
+                                                        <li>@mangaInfo.Type</li>
+                                                    </ul>
+                                                    <h5>
+                                                        <a asp-route-id="@mangaInfo.AnimeId" asp-controller="Home" asp-action="AnimeDetail">@mangaInfo.AnimeName</a>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="trending__product">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <div class="section-title">
+                                            <h4> Movie List</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    @foreach (var movieInfo in Model.Where(item => item.Type == "Movie"))
+                                    {
+                                        <div class="col-lg-4 col-md-6 col-sm-6">
+                                            <div class="product__item">
+                                                <div class="product__item__pic set-bg" data-setbg="/images/@movieInfo.ImageFileName">
+                                                    <div class="ep">@movieInfo.Episode</div>
+                                                    @* <div class="comment"><i class="fa fa-comments"></i> 11</div> *@
+                                                    <div class="view">
+                                                        <i class="fa fa-eye"></i> @movieInfo.ViewCount
+                                                    </div>
+                                                </div>
+                                                <div class="product__item__text">
+                                                    <ul>
+                                                        <li>@movieInfo.Type</li>
+                                                    </ul>
+                                                    <h5>
+                                                        <a asp-route-id="@movieInfo.AnimeId" asp-controller="Home" asp-action="AnimeDetail">@movieInfo.AnimeName</a>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-3">
+            <partial name="_SidebarAnime" model="@Model"></partial>
+                        <partial name="_TopRated" model="@Model"></partial>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
 @* <section class="hero"> *@
-      @*       <div class="container"> *@
-      @*           <div class="hero__slider owl-carousel"> *@
-      @*               <div class="hero__items set-bg" data-setbg="/User/img/hero/hero-1.jpg"> *@
-      @*                   <div class="row"> *@
-      @*                       <div class="col-lg-6"> *@
-      @*                           <div class="hero__text"> *@
-      @*                               <div class="label">Adventure</div> *@
-      @*                               <h2>Fate / Stay Night: Unlimited Blade Works</h2> *@
-      @*                               <p>After 30 days of travel across the world...</p> *@
-      @*                               <a href="~/user/#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a> *@
-      @*                           </div> *@
-      @*                       </div> *@
-      @*                   </div> *@
-      @*               </div> *@
-      @*               <div class="hero__items set-bg" data-setbg="/User/img/hero/hero-1.jpg"> *@
-      @*                   <div class="row"> *@
-      @*                       <div class="col-lg-6"> *@
-      @*                           <div class="hero__text"> *@
-      @*                               <div class="label">Adventure</div> *@
-      @*                               <h2>Fate / Stay Night: Unlimited Blade Works</h2> *@
-      @*                               <p>After 30 days of travel across the world...</p> *@
-      @*                               <a href="~/user/#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a> *@
-      @*                           </div> *@
-      @*                       </div> *@
-      @*                   </div> *@
-      @*               </div> *@
-      @*               <div class="hero__items set-bg" data-setbg="/User/img/hero/hero-1.jpg"> *@
-      @*                   <div class="row"> *@
-      @*                       <div class="col-lg-6"> *@
-      @*                           <div class="hero__text"> *@
-      @*                               <div class="label">Adventure</div> *@
-      @*                               <h2>Fate / Stay Night: Unlimited Blade Works</h2> *@
-      @*                               <p>After 30 days of travel across the world...</p> *@
-      @*                               <a href="~/user/#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a> *@
-      @*                           </div> *@
-      @*                       </div> *@
-      @*                   </div> *@
-      @*               </div> *@
-      @*           </div> *@
-      @*       </div> *@
-      @*   </section> *@
-        <!-- Hero Section End -->
-    
-        <!-- Product Section Begin -->
+@*       <div class="container"> *@
+@*           <div class="hero__slider owl-carousel"> *@
+@*               <div class="hero__items set-bg" data-setbg="/User/img/hero/hero-1.jpg"> *@
+@*                   <div class="row"> *@
+@*                       <div class="col-lg-6"> *@
+@*                           <div class="hero__text"> *@
+@*                               <div class="label">Adventure</div> *@
+@*                               <h2>Fate / Stay Night: Unlimited Blade Works</h2> *@
+@*                               <p>After 30 days of travel across the world...</p> *@
+@*                               <a href="~/user/#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a> *@
+@*                           </div> *@
+@*                       </div> *@
+@*                   </div> *@
+@*               </div> *@
+@*               <div class="hero__items set-bg" data-setbg="/User/img/hero/hero-1.jpg"> *@
+@*                   <div class="row"> *@
+@*                       <div class="col-lg-6"> *@
+@*                           <div class="hero__text"> *@
+@*                               <div class="label">Adventure</div> *@
+@*                               <h2>Fate / Stay Night: Unlimited Blade Works</h2> *@
+@*                               <p>After 30 days of travel across the world...</p> *@
+@*                               <a href="~/user/#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a> *@
+@*                           </div> *@
+@*                       </div> *@
+@*                   </div> *@
+@*               </div> *@
+@*               <div class="hero__items set-bg" data-setbg="/User/img/hero/hero-1.jpg"> *@
+@*                   <div class="row"> *@
+@*                       <div class="col-lg-6"> *@
+@*                           <div class="hero__text"> *@
+@*                               <div class="label">Adventure</div> *@
+@*                               <h2>Fate / Stay Night: Unlimited Blade Works</h2> *@
+@*                               <p>After 30 days of travel across the world...</p> *@
+@*                               <a href="~/user/#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a> *@
+@*                           </div> *@
+@*                       </div> *@
+@*                   </div> *@
+@*               </div> *@
+@*           </div> *@
+@*       </div> *@
+@*   </section> *@
+<!-- Hero Section End -->
+
+<!-- Product Section Begin -->
 @*         <section class="product spad"> *@
 @*             <div class="container"> *@
 @*                 <div class="row"> *@
@@ -664,4 +932,21 @@
 @*     </div> *@
 @*     </div> *@
 @*     </section> *@
-</div>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the last scroll position from localStorage
+        var lastScrollPosition = localStorage.getItem('lastScrollPosition');
+
+        // If a scroll position was previously saved, scroll to it
+        if (lastScrollPosition) {
+            window.scrollTo(0, lastScrollPosition);
+        }
+
+        // Save the scroll position when the user scrolls
+        window.addEventListener('scroll', function () {
+            localStorage.setItem('lastScrollPosition', window.scrollY);
+        });
+    });
+</script>

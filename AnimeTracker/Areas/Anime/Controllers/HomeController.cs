@@ -7,12 +7,13 @@ using AspNetCoreHero.ToastNotification.Abstractions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
 
 namespace AnimeTracker.Areas.Anime.Controllers;
 
 [Area("anime")]
 
-[Authentication]
+// [Authentication]
 
 public class HomeController : Controller
 {
@@ -22,30 +23,126 @@ public class HomeController : Controller
     private readonly ICategoryRepository _categoryRepository;
     private readonly IFileHelper _fileHelper;
     private readonly IAnimeCategory _animeCategory;
+    private readonly IUsers _users;
 
 
     // GET
     public HomeController(IAnimeRepository animeRepository, ICategoryRepository categoryRepository,
-        IFileHelper fileHelper, IAnimeCategory animeCategory,INotyfService notifyService)
+        IFileHelper fileHelper, IAnimeCategory animeCategory,INotyfService notifyService,IUsers users)
     {
         _animeRepository = animeRepository;
         _categoryRepository = categoryRepository;
         _fileHelper = fileHelper;
         _animeCategory = animeCategory;
         _notifyService = notifyService;
+        _users = users;
 
     }
 
     [HttpGet]
-    public IActionResult Index()
+    public IActionResult Index(string search,string type,string cate,string sortOrder)
     {
 
         var animelist = _animeRepository.List();
         var categoryList = _categoryRepository.List();
         var animevmList = new List<Animevm>();
 
+
+            if (!string.IsNullOrEmpty(search) || !string.IsNullOrEmpty(type) || !string.IsNullOrEmpty(cate))
+    {
+        // Apply the filters to the results
+        var results = _animeRepository.FindByName(search, type, cate);
+
+        if (results.Any())
+        {
+            // Populate the view model based on filtered results
+            foreach (var anime in results)
+            {
+                var animee = new Animevm
+                {
+                    AnimeId = anime.AnimeId,
+                    AnimeName = anime.Name,
+                    ImageFileName = anime.ImageFileName,
+                    Type = anime.Type,
+                    ViewCount = anime.ViewCount,
+                    Episode = anime.Episode,
+                    category = anime.AnimeCategories.Select(ac => ac.Category.Name).ToList(),
+                    Description = anime.Description
+                };
+
+                animevmList.Add(animee);
+            }
+
+            return View(animevmList);
+        }
+
+//    if (!string.IsNullOrEmpty(sortOrder))
+//     {
+//         switch (sortOrder)
+//         {
+//             case "name_asc":
+//                 animelist = animelist.OrderBy(a=>a.Name).ToList();
+//                 break;
+//             case "name_desc":
+//                 animelist = animelist.OrderByDescending(a => a.Name).ToList();
+//                 break;
+//             case "episode_asc":
+//                 animelist = animelist.OrderBy(a => a.Episode).ToList();
+//                 break;
+//             case "episode_desc":
+//                 animelist = animelist.OrderByDescending(a => a.Episode).ToList();
+           
+//                 break;
+//         }
+
+//         foreach (var anime in animelist)
+//         {
+
+
+//             // var categoryName = anime.AnimeCategories
+//             //     .Select(a => categoryList.FirstOrDefault(c => c.CategoryId == a.CategoryId)?.Name).ToList();
+
+//             //
+//             // var categoryName = anime.AnimeCategories
+//             //     .Select(animeCategory =>
+//             //         categoryList
+//             //             .FirstOrDefault(categoryId => categoryId.CategoryId == animeCategory.CategoryId)?.Name)
+//             //     .ToList();
+
+//             var categoryName = anime.AnimeCategories
+//                 .Select(animeCat => categoryList.FirstOrDefault(catId => catId.CategoryId == animeCat.CategoryId)?.Name)
+//                 .ToList();
+//             var animevm = new Animevm
+//             {
+//                 AnimeId = anime.AnimeId,
+//                 AnimeName = anime.Name,
+//                 ImageFileName = anime.ImageFileName,
+//                 Episode = anime.Episode,
+//                 CategoryName = string.Join(",", categoryName),
+//                 CurrentPage = 1,
+//                 TotalPages = 10,
+//             };
+//             animevmList.Add(animevm);
+//         }
+
+
+//         return View(animevmList);
+//     }
+
+    // If you are using pagination, you may want to adjust this logic accordingly
+
+    return View(animevmList);
+
+
+        // If no results, you may want to handle this case
+        return View(new List<Animevm>());
+    }
+
+
         foreach (var anime in animelist)
         {
+
+
             // var categoryName = anime.AnimeCategories
             //     .Select(a => categoryList.FirstOrDefault(c => c.CategoryId == a.CategoryId)?.Name).ToList();
 
@@ -64,7 +161,10 @@ public class HomeController : Controller
                 AnimeId = anime.AnimeId,
                 AnimeName = anime.Name,
                 ImageFileName = anime.ImageFileName,
-                CategoryName = string.Join(",", categoryName)
+                Episode = anime.Episode,
+                CategoryName = string.Join(",", categoryName),
+                CurrentPage = 1,
+                TotalPages = 10,
             };
             animevmList.Add(animevm);
         }
@@ -84,6 +184,8 @@ public class HomeController : Controller
     {
         var categories = _categoryRepository.List();
         var categoryOptions = new SelectList(categories, nameof(Category.CategoryId), nameof(Category.Name));
+     
+        
         var vm = new Animevm
         {
             CategoryList = categoryOptions
@@ -111,15 +213,16 @@ public class HomeController : Controller
             vm.ImageFileName = uniqueFileName;
         }
 
-        var anime = new AnimeTracker.Models.Anime
+        var anime = new AnimeTracker.Models.Anime();
+        anime.Name = vm.Name;
+        anime.ImageFileName = vm.ImageFileName;
+        anime.Episode = vm.Episode;
+        anime.Type = vm.Type;
+        anime.Description = vm.Description;
+        anime.AnimeCategories = vm.CategoryId.Select(category => new AnimeCategory
         {
-            Name = vm.Name,
-            ImageFileName = vm.ImageFileName,
-            AnimeCategories = vm.CategoryId.Select(category => new AnimeCategory
-            {
-                CategoryId = category
-            }).ToList()
-        };
+            CategoryId = category
+        }).ToList();
 
         _animeRepository.Insert(anime);
 
@@ -163,9 +266,12 @@ public class HomeController : Controller
         var anime = new UpdateAnimevm
         {
             CategoryList = new SelectList(categories, "CategoryId", "Name"),
+            Episode = entity.Episode,
             AnimeName = entity.Name,
             Image = entity.ImageFileName,
-            CategoryId = animeCategories
+            Type = entity.Type,
+            CategoryId = animeCategories,
+            Description = entity.Description
         };
 
         return View(anime);
@@ -195,24 +301,47 @@ public class HomeController : Controller
         {
             entity.Name = vm.AnimeName;
         }
+        if (vm.Description != null)
+        {
+            entity.Description = vm.Description;
+        }
+
+        if (vm.Episode != null)
+        {
+            entity.Episode = vm.Episode;
+        }
 
         if (vm.Image != null)
         {
             entity.ImageFileName = vm.Image;
         }
+        if (vm.Type != null)
+        {
+            entity.Type = vm.Type;
+        }
 
 
         if (vm.CategoryId != null)
         {
-            entity.AnimeCategories = new List<AnimeCategory>();
+            var existingCategories = entity.AnimeCategories.Select(ac => ac.CategoryId).ToList();
+
+            var categoriesToRemove = entity.AnimeCategories.Where(ac => !vm.CategoryId.Contains(ac.CategoryId)).ToList();
+            foreach (var categoryToRemove in categoriesToRemove)
+            {
+                entity.AnimeCategories.Remove(categoryToRemove);
+            }
+            
 
             foreach (var categoryId in vm.CategoryId)
             {
-                entity.AnimeCategories.Add(new AnimeCategory
+                if (!existingCategories.Contains(categoryId))
                 {
-                    AnimeId = vm.AnimeId,
-                    CategoryId = categoryId
-                });
+                    entity.AnimeCategories.Add(new AnimeCategory
+                    {
+                        AnimeId = vm.AnimeId,
+                        CategoryId = categoryId
+                    });
+                }
             }
         }
 
@@ -242,64 +371,14 @@ public class HomeController : Controller
         return RedirectToAction("Index");
     }
 
-    [HttpGet]
-    public IActionResult AddCategory()
-    {
-        return View();
-    }
 
-    [HttpPost]
-    public IActionResult AddCategory(Animevm cm)
-    {
-        var vm = new Category
-        {
-            Name = cm.CategoryName
-        };
-        _categoryRepository.Insert(vm);
-
-        return RedirectToAction("Index");
-    }
-
-    [HttpGet]
-    public IActionResult GetCategory()
-    {
-        var categories = _categoryRepository.List();
-
-        // Create an Animevm instance to hold the categories
-
-        var category = new List<Animevm>();
-        foreach (var categorys in categories)
-        {
-            var categoryName = categorys.Name;
-            var categoryId = categorys.CategoryId;
-            var animeCategory = new Animevm
-            {
-                CategoryName = categoryName,
-                CatId = categoryId
-            };
-            category.Add(animeCategory);
-        }
-
-        return View(category);
-    }
-
-
-    public IActionResult DeleteCategory(Guid id)
-    {
-        var catgeoryID = _categoryRepository.Find(id);
-        if (catgeoryID != null)
-        {
-            _categoryRepository.Delete(catgeoryID);
-        }
-
-        return RedirectToAction("Index");
-    }
+ 
     
     
     public ActionResult Logout()
     {
         HttpContext.Session.Clear();
         HttpContext.Session.Remove("UserName");
-        return RedirectToAction("Login",new{area=""});
+        return RedirectToAction("Login","User",new{area=""});
     }
 }

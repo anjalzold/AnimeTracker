@@ -62,6 +62,8 @@ namespace AnimeTracker.Data.Repositories.Implementation.Base
         {
             return _context.Set<T>().Find(id);
         }
+
+ 
         public async Task<T?> FindAsync(Guid id)
         {
             return await _context.Set<T>().FindAsync(id);

@@ -4,27 +4,100 @@
     Layout = "_Layout";
 }
 
-<div class="m-5" id="exampleModal">
+
+<div class="p-5 w-50 mx-auto bg-white mt-4 rounded-3">
+
+    
+    <div class="row mt-2 ">
+        <div class="d-flex flex-row-reverse">
+            <!-- Button trigger modal -->
+            <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#modalCenter"
+                asp-area="Anime"
+                asp-controller="Category"
+                asp-action="AddCategory">
+                Add Category
+            </button>
+        </div>
+        <div class="col-lg-4 col-md-6">
+
+            <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalCenterTitle">Add Category</h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close">
+                            </button>
+                        </div>
+                        <form method="post" asp-area="Anime" asp-controller="Category" asp-action="AddCategory">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Category Name" asp-for="CategoryName"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
     <form method="post" asp-area="Anime" asp-controller="Home" asp-action="Add" enctype="multipart/form-data">
-     
+
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Name</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" asp-for="Name"/>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" asp-for="Name"/>
         </div>
-         <div class="form-group">
-                <label for="CategoryId">Category:</label>
-                <select class="form-control" id="CategoryId" name="CategoryId" asp-for="CategoryId" asp-items="Model.CategoryList" multiple>
-                    <option value="">Select a category...</option>
-                </select>
-            </div>
-                    <div class="mb-3">
-                        <label for="imageFile" class="form-label">Image</label>
-                        <input type="file" class="form-control" id="imageFile" name="ImageFile"/>
-                    </div>
-                    <input type="submit"/>
-        }
-      
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Episode</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Episode number" asp-for="Episode"/>
+        </div>
+        <div class="form-group mb-4">
+            <label for="CategoryId" class="mb-2"> Category:</label>
+            <select class="form-control" id="CategoryId" name="CategoryId" asp-for="CategoryId" asp-items="Model.CategoryList" multiple>
+                @* <option value="">Select a category...</option> *@
+            </select>
+        </div>
+        
+         <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="mb-2">Description</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter description for anime" asp-for="Description"/>
+                </div>
+        <div class="form-group mb-4">
+            <label class="mb-2" for="">Type:</label>
+            <select class="form-control" asp-for="Type">
+                <option value="Anime">Anime</option>
+                <option value="Manga">Manga</option>
+                <option value="Movie">Movie</option>
+            </select>
+        </div>
+
+
+        <div class="mb-4">
+            <label for="imageFile" class="mb-2">Image</label>
+            <input type="file" class="form-control" id="imageFile" name="ImageFile"/>
+        </div>
+        <input type="submit"/>
+
+
     </form>
 </div>
-
-

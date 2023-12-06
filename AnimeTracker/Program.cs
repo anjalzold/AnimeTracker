@@ -10,11 +10,10 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
+using UserAnimeList = AnimeTracker.Models.UserAnimeList;
+using UserAnimeStatus = AnimeTracker.Data.Repositories.Implementation.UserAnimeStatus;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
-
 
 
 ConfigureServices(builder.Services);
@@ -22,23 +21,18 @@ ConfigureServices(builder.Services);
 //------------------------[ Add services to the container ]-----------------------------
 void ConfigureServices(IServiceCollection services)
 {
-    services.AddNotyf(config=> { config.DurationInSeconds = 10;config.IsDismissable = true;config.Position = NotyfPosition.BottomRight; });
+    services.AddNotyf(config =>
+    {
+        config.DurationInSeconds = 10;
+        config.IsDismissable = true;
+        config.Position = NotyfPosition.BottomRight;
+    });
     services.AddControllersWithViews().AddRazorRuntimeCompilation();
     builder.Services.AddSession();
+    services.AddLogging();
 
-    // services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    //     .AddCookie(
-    //         option =>
-    //         {
-    //             option.LoginPath = "/Home/Login";
-    //             option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-    //         }
-    //         
-    // )
-    // ;
-    
+
     RegisterElements(services);
-    
 }
 
 
@@ -47,8 +41,6 @@ void ConfigureServices(IServiceCollection services)
 //--------------------------[ Register Elements Here ]---------------------------------- 
 void RegisterElements(IServiceCollection services)
 {
-
- 
     AddDbContext(services);
     RegisterRepositories(services);
 }
@@ -76,10 +68,11 @@ void RegisterRepositories(IServiceCollection services)
     services.AddTransient<IFileHelper, FileHelperImplementation>();
     services.AddTransient<IAnimeCategory, AnimeCategoryRepository>();
     services.AddTransient<IUsers, UserRepository>();
-
-
+    services.AddTransient<IUserAnimeStatus, UserAnimeStatus>();
+    services.AddTransient<IUserAnimeList, UserAnimeLists>();
 
     
+
     
 }
 //--------------------------------------------------------------------------------------
@@ -90,10 +83,28 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
+    app.UseStatusCodePagesWithReExecute("/Home/NotFound/{0}");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
+app.UseStatusCodePages(async context =>
+{
+    if (context.HttpContext.Response.StatusCode == StatusCodes.Status404NotFound)
+    {
+        context.HttpContext.Response.ContentType = "text/html";
+        await context.HttpContext.Response.WriteAsync("<html><body><h1>Page Not Found</h1></body></html>");
+
+    }
+    else if (context.HttpContext.Response.StatusCode == StatusCodes.Status500InternalServerError)
+    {
+        context.HttpContext.Response.ContentType = "text/html";
+
+        await context.HttpContext.Response.WriteAsync("<html><body><h1>Internal Server Error</h1></body></html>");
+
+        
+    }
+});
 app.UseNotyf();
 
 
@@ -117,9 +128,19 @@ app.MapControllerRoute(
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
 );
 app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=User}/{action=Index}/{id?}"
+);
+
+app.MapControllerRoute(
+    name: "CategoryRoute",
+    pattern: "Category/{categoryName}",
+    defaults: new { controller = "Home", action = "Category" }
+);
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
 
 
 app.Run();

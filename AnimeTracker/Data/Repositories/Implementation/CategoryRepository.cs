@@ -9,4 +9,10 @@ public class CategoryRepository:Repository<Category>,ICategoryRepository
     public CategoryRepository(AppDbContext context) : base(context)
     {
     }
+
+
+    public Category FindByName(string categoryName)
+    {
+        return _context.Categories.FirstOrDefault(c => c.Name == categoryName);
+    }
 }

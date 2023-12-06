@@ -1,25 +1,28 @@
 @model List<AnimeTracker.Areas.Anime.Models.Animevm>
 
-<div class="row">
+
+
+
+<div class="product__sidebar__comment mt-5">
+    <p class="text-white  " style="font-size: 24px; font-weight: 700;">Most Popular</p>
     @foreach (var animeinfo in Model.OrderByDescending(item => item.ViewCount))
     {
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="product__item">
-                <div class="product__item__pic set-bg" data-setbg="images/@animeinfo.ImageFileName">
-                    <div class="ep">18 / 18</div>
-                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                    <div class="view"><i class="fa fa-eye"></i> @animeinfo.ViewCount</div>
-                </div>
-                <div class="product__item__text">
-                    <ul>
-                        <li>Active</li>
-                        <li>Movie</li>
-                    </ul>
-                    <h5>
-                        <a asp-route-id="@animeinfo.AnimeId" asp-controller="Home" asp-action="AnimeDetail">@animeinfo.AnimeName</a>
-                    </h5>
-                </div>
+        <div class="product__sidebar__comment__item">
+            <div class="product__sidebar__comment__item__pic">
+                <img src="/images/@animeinfo.ImageFileName" class="" style="object-fit: cover" width="100px" height="100px"
+                    alt="">
+            </div>
+            <div class="product__sidebar__comment__item__text">
+                <ul>
+                    <li>@animeinfo.Type</li>
+                </ul>
+                <h5>
+                    <a asp-route-id="@animeinfo.AnimeId" asp-controller="Home" asp-action="AnimeDetail">@animeinfo.AnimeName
+                    </a>
+                </h5>
+                <span><i class="fa fa-eye"></i> @animeinfo.ViewCount Viewes</span>
             </div>
         </div>
+
     }
 </div>

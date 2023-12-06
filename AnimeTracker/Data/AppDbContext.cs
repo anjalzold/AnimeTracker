@@ -11,6 +11,17 @@ public class AppDbContext:DbContext
         
     }
     
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        //To Display the Generated the Database Script
+        optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
+
+        //Enabling Lazy Loading
+        optionsBuilder.UseLazyLoadingProxies();
+
+    }
+    
+    
     public DbSet<Anime> Animes { get; set; }
     
     public DbSet<Category> Categories { get; set; }
@@ -18,6 +29,9 @@ public class AppDbContext:DbContext
     public DbSet<AnimeCategory> AnimeCategories { get; set; }
     
     public DbSet<Users> Users { get; set; }
+    
+    public DbSet<UserAnimeList> UserAnimeLists { get; set; }
+    public DbSet<UserAnimeStatus> UserAnimeStatuss { get; set; }
 
     
 

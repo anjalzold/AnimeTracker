@@ -1,0 +1,13 @@
+@media (max-width: 800px) {
+
+    .filter-container{
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .filter-container{
+       display: none;
+    }
+}

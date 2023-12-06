@@ -25,30 +25,30 @@
                 <div class="trending__product">
                     <div class="row">
                         <div class="col-lg-8 col-md-8 col-sm-8">
-                            <div class="section-title">
-                                <h4>Trending Now</h4>
-                            </div>
+                            @foreach (var category in Model.Take(1))
+                            {
+                                <div class="section-title">
+                                    <h4>@category.CategoryName</h4>
+                                </div>
+                            }
+                       
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="btn__all">
-                                <a href="~/user/#" class="primary-btn">View All <span class="arrow_right"></span></a>
-                            </div>
-                        </div>
+                      
                     </div>
                     <div class="row">
                         @foreach (var anime in Model)
                         {
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="images/@anime.ImageFileName">
-                                        <div class="ep">18 / 18</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <div class="product__item__pic set-bg" data-setbg="/images/@anime.ImageFileName">
+                                        <div class="ep">@anime.Episode</div>
+                                        @* <div class="comment"><i class="fa fa-comments"></i> 11</div> *@
+                                        <div class="view"><i class="fa fa-eye"></i> @anime.ViewCount</div>
                                     </div>
                                     <div class="product__item__text">
                                         <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
+                                            @* <li>Active</li> *@
+                                            <li>@anime.Type</li>
                                         </ul>
                                         <h5>
                                             <a asp-route-id="@anime.AnimeId" asp-controller="Home" asp-action="AnimeDetail">@anime.AnimeName</a>
@@ -68,4 +68,6 @@
 
 
 </section>
+
+<a asp-controller="Home" asp-action="CategoryPage">Category Page</a>
 </div>

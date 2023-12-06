@@ -57,6 +57,9 @@ namespace AnimeTracker.Migrations
                     b.Property<int>("ViewCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("comment")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("AnimeId");
 
                     b.ToTable("Animes");
@@ -178,6 +181,43 @@ namespace AnimeTracker.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("Comment", b =>
+                {
+                    b.Property<Guid>("CommentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AnimeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CommentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CommentText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("UserAnimeListId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CommentId");
+
+                    b.HasIndex("AnimeId");
+
+                    b.HasIndex("UserAnimeListId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comment");
+                });
+
             modelBuilder.Entity("AnimeTracker.Models.AnimeCategory", b =>
                 {
                     b.HasOne("AnimeTracker.Models.Anime", "Anime")
@@ -224,9 +264,34 @@ namespace AnimeTracker.Migrations
                     b.Navigation("Users");
                 });
 
+            modelBuilder.Entity("Comment", b =>
+                {
+                    b.HasOne("AnimeTracker.Models.Anime", "Anime")
+                        .WithMany("Comments")
+                        .HasForeignKey("AnimeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AnimeTracker.Models.UserAnimeList", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("UserAnimeListId");
+
+                    b.HasOne("AnimeTracker.Models.Users", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Anime");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("AnimeTracker.Models.Anime", b =>
                 {
                     b.Navigation("AnimeCategories");
+
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("AnimeTracker.Models.Category", b =>
@@ -236,6 +301,8 @@ namespace AnimeTracker.Migrations
 
             modelBuilder.Entity("AnimeTracker.Models.UserAnimeList", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("UserAnimeStatus");
                 });
 

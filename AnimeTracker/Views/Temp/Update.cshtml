@@ -1,7 +1,5 @@
-@model IEnumerable<AnimeTracker.Areas.Anime.Models.Animevm>
-@{
-    Layout = null;
-}
+@model AnimeTracker.Areas.Anime.Models.Animevm
+
 
 <!DOCTYPE html>
 
@@ -11,15 +9,19 @@
 </head>
 <body>
 <div>
-  @foreach (var a in Model)
-  {
-      <h1>@a.AnimeName</h1>
-      <img src="~/images/@a.ImageFileName"/>
-          @foreach (var ac in a.category)
-          {
-              <p>@ac</p>
-          }                                
-  }    
+    <h1>
+        This is update page
+    </h1> 
+    
+    <p>@Model.AnimeName</p>
+    <p>
+       @foreach (var a in Model.category)
+       {
+           <a asp-route-categoryName="@a" asp-controller="Temp" asp-action="Category">@a</a>
+       }
+    </p>
+    
+    
 </div>
 </body>
 </html>

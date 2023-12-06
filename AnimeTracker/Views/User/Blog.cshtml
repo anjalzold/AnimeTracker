@@ -1,8 +1,55 @@
-@model TModel
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
 
-<h2>title</h2>
+
+
+    <div class="container mt-4 text-white">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2 class="mb-4">Anime Tracking Website - Your Ultimate Anime Companion</h2>
+
+                <img src="https://beebom.com/wp-content/uploads/2023/06/Anime.jpg?w=640" alt="Anime Tracking Website" class="img-fluid mb-4" style="object-fit: cover; width: 100%">
+
+                <p>Welcome to our Anime Tracking Website, where your anime-watching experience reaches new heights! Our platform is designed to provide you with the best service to track your favorite anime and discover exciting new titles.</p>
+
+                <p>Here are some key features that make our website stand out:</p>
+
+                <ul>
+                    <li><strong>Personalized Anime Tracking:</strong> Keep tabs on your watched, watching, and planned anime with ease.</li>
+                    <li><strong>Detailed Anime Information:</strong> Access comprehensive information about each anime, including episodes, genres, and ratings.</li>
+                    <li><strong>User-Friendly Interface:</strong> Our intuitive and user-friendly interface ensures a seamless and enjoyable experience.</li>
+                    <li><strong>Custom Lists:</strong> Create custom lists to organize your anime based on your preferences.</li>
+                    <li><strong>Rating and Reviews:</strong> Share your thoughts by rating and reviewing anime titles.</li>
+                </ul>
+
+                <p>Whether you are an anime enthusiast or a casual viewer, our Anime Tracking Website is here to enhance your anime journey. Stay updated on the latest releases, manage your watchlist effortlessly, and connect with a community of fellow anime lovers.</p>
+
+                <p>Ready to elevate your anime-watching experience? Join us today and let the anime tracking adventure begin!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the last scroll position from localStorage
+        var lastScrollPosition = localStorage.getItem('lastScrollPosition');
+
+        // If a scroll position was previously saved, scroll to it
+        if (lastScrollPosition) {
+            window.scrollTo(0, lastScrollPosition);
+        }
+
+        // Save the scroll position when the user scrolls
+        window.addEventListener('scroll', function () {
+            localStorage.setItem('lastScrollPosition', window.scrollY);
+        });
+    });
+</script>
+
+
+    <!-- Bootstrap JS scripts (optional) -->
+

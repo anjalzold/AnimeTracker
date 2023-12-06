@@ -25,17 +25,17 @@
                 @foreach (var user in Model)
                 {
                     <tr>
-                        <td class="w-25 h-50">
+                        <td class="w-25 h-50">  
 
-                            <img src="https://e7.pngegg.com/pngimages/550/997/png-clipart-user-icon-foreigners-avatar-child-face.png" class="object-fit-scale" width="100" height="100"/>
+                            <img src=@user.ImagePath class="object-fit-scale" width="100" height="100"/>
 
                         </td>
                         <td>
 
-                            @user.FullName
+                            @user.UserName
 
                         </td>
-                        <td>@user.UserName</td>
+                        <td>@user.FullName</td>
                         <td>
                             @user.UserEmail
                         </td>
@@ -52,10 +52,10 @@
                                 </button>
 
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" asp-route-id="@user.UserId" asp-area="Anime" asp-controller="Home" asp-action="Update">
+                                    <a class="dropdown-item" asp-route-id="@user.UserId" asp-area="Anime" asp-controller="User" asp-action="Update">
                                         <i class="bx bx-edit-alt me-2"></i> Edit
                                     </a>
-                                    <a class="dropdown-item" asp-route-id="@user.UserId" asp-area="Anime" asp-controller="Home" asp-action="Delete">
+                                    <a class="dropdown-item" asp-route-id="@user.UserId" asp-area="Anime" asp-controller="User" asp-action="Delete">
                                         <i class="bx bx-trash me-2"></i> Delete
                                     </a>
                                 </div>
@@ -71,3 +71,20 @@
     </div>
 
 </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the last scroll position from localStorage
+        var lastScrollPosition = localStorage.getItem('lastScrollPosition');
+
+        // If a scroll position was previously saved, scroll to it
+        if (lastScrollPosition) {
+            window.scrollTo(0, lastScrollPosition);
+        }
+
+        // Save the scroll position when the user scrolls
+        window.addEventListener('scroll', function () {
+            localStorage.setItem('lastScrollPosition', window.scrollY);
+        });
+    });
+</script>

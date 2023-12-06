@@ -3,43 +3,38 @@
     Layout = "_Layout";
 }
 
-@model AnimeTracker.Areas.Anime.Models.UpdateAnimevm
+@model AnimeTracker.Areas.Anime.Models.Uservm
 
 
 
-<div class="m-5" id="exampleModal">
-    <form method="post" asp-area="Anime" asp-controller="Home" asp-action="Update" enctype="multipart/form-data">
-        
+<div class="m-5 bg-white p-5 w-50 w-[1200px] mx-auto" id="exampleModal">
+    <p class="text-center">Update User</p>
+    <form method="post" asp-area="Anime" asp-controller="User" asp-action="Update" enctype="multipart/form-data">
+
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Name</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" asp-for="AnimeName"/>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" asp-for="FullName"/>
         </div>
-
-        <div class="form-group">
-            <select class="form-control" asp-for="CategoryId" multiple>
-                @foreach (var category in Model.CategoryList)
-                {
-                    <option value="@category.Value">@category.Text</option>
-                }
-            </select>
-        </div>
-
-
-        <div class="form-group">
-            <label for="">Type:</label>
-            <select class="form-control" asp-for="Type">
-                <option value="Anime">Anime</option>
-                <option value="Manga">Manga</option>
-                <option value="Movie">Movie</option>
-            </select>
-        </div>
-
         <div class="mb-3">
-            @* <label for="imageFile" class="form-label">Image</label> *@
-
-            <input type="file" class="form-control" id="imageFile" name="ImageFile"/>
+            <label for="exampleFormControlInput1" class="form-label">UserName</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" asp-for="UserName"/>
         </div>
-        <input type="submit"/>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" asp-for="UserEmail"/>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" asp-for="UserPassword"/>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Role</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" asp-for="Role"/>
+        </div>
+
+
+
+        <input  type="submit"/>
     </form>
 </div>
 
