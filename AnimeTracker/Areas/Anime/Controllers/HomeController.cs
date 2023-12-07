@@ -39,23 +39,22 @@ public class HomeController : Controller
 
     }
 
+
+
     [HttpGet]
-    public IActionResult Index(string search,string type,string cate,string sortOrder)
+public IActionResult Index(string search, string type, string cate, string sortOrder)
+{
+    var animelist = _animeRepository.List();
+    var categoryList = _categoryRepository.List();
+    var animevmList = new List<Animevm>();
+
+    // Apply filters
+    if (!string.IsNullOrEmpty(search) || !string.IsNullOrEmpty(type) || !string.IsNullOrEmpty(cate))
     {
-
-        var animelist = _animeRepository.List();
-        var categoryList = _categoryRepository.List();
-        var animevmList = new List<Animevm>();
-
-
-            if (!string.IsNullOrEmpty(search) || !string.IsNullOrEmpty(type) || !string.IsNullOrEmpty(cate))
-    {
-        // Apply the filters to the results
         var results = _animeRepository.FindByName(search, type, cate);
-
+        
         if (results.Any())
         {
-            // Populate the view model based on filtered results
             foreach (var anime in results)
             {
                 var animee = new Animevm
@@ -75,6 +74,91 @@ public class HomeController : Controller
 
             return View(animevmList);
         }
+        return View(animevmList);
+    }
+
+    // Apply sorting
+    if (!string.IsNullOrEmpty(sortOrder))
+    {
+        switch (sortOrder)
+        {
+            case "name_asc":
+                animelist = animelist.OrderBy(a => a.Name).ToList();
+                break;
+            case "name_desc":
+                animelist = animelist.OrderByDescending(a => a.Name).ToList();
+                break;
+            case "episode_asc":
+                animelist = animelist.OrderBy(a => a.Episode).ToList();
+                break;
+            case "episode_desc":
+                animelist = animelist.OrderByDescending(a => a.Episode).ToList();
+                break;
+        }
+    }
+
+    // Map to ViewModel
+    foreach (var anime in animelist)
+    {
+        var categoryName = anime.AnimeCategories
+            .Select(animeCat => categoryList.FirstOrDefault(catId => catId.CategoryId == animeCat.CategoryId)?.Name)
+            .ToList();
+
+        var animevm = new Animevm
+        {
+            AnimeId = anime.AnimeId,
+            AnimeName = anime.Name,
+            ImageFileName = anime.ImageFileName,
+            Episode = anime.Episode,
+            CategoryName = string.Join(",", categoryName),
+            CurrentPage = 1,
+            TotalPages = 10,
+        };
+
+        animevmList.Add(animevm);
+    }
+
+    return View(animevmList);
+}
+
+
+
+//     [HttpGet]
+//     public IActionResult Index(string search,string type,string cate,string sortOrder)
+//     {
+
+//         var animelist = _animeRepository.List();
+//         var categoryList = _categoryRepository.List();
+//         var animevmList = new List<Animevm>();
+
+
+//             if (!string.IsNullOrEmpty(search) || !string.IsNullOrEmpty(type) || !string.IsNullOrEmpty(cate))
+//     {
+//         // Apply the filters to the results
+//         var results = _animeRepository.FindByName(search, type, cate);
+
+//         if (results.Any())
+//         {
+//             // Populate the view model based on filtered results
+//             foreach (var anime in results)
+//             {
+//                 var animee = new Animevm
+//                 {
+//                     AnimeId = anime.AnimeId,
+//                     AnimeName = anime.Name,
+//                     ImageFileName = anime.ImageFileName,
+//                     Type = anime.Type,
+//                     ViewCount = anime.ViewCount,
+//                     Episode = anime.Episode,
+//                     category = anime.AnimeCategories.Select(ac => ac.Category.Name).ToList(),
+//                     Description = anime.Description
+//                 };
+
+//                 animevmList.Add(animee);
+//             }
+
+//             return View(animevmList);
+//         }
 
 //    if (!string.IsNullOrEmpty(sortOrder))
 //     {
@@ -94,6 +178,7 @@ public class HomeController : Controller
            
 //                 break;
 //         }
+//     }
 
 //         foreach (var anime in animelist)
 //         {
@@ -131,16 +216,14 @@ public class HomeController : Controller
 
     // If you are using pagination, you may want to adjust this logic accordingly
 
-    return View(animevmList);
 
 
         // If no results, you may want to handle this case
-        return View(new List<Animevm>());
-    }
+    // }
 
 
-        foreach (var anime in animelist)
-        {
+        // foreach (var anime in animelist)
+        // {
 
 
             // var categoryName = anime.AnimeCategories
@@ -153,26 +236,26 @@ public class HomeController : Controller
             //             .FirstOrDefault(categoryId => categoryId.CategoryId == animeCategory.CategoryId)?.Name)
             //     .ToList();
 
-            var categoryName = anime.AnimeCategories
-                .Select(animeCat => categoryList.FirstOrDefault(catId => catId.CategoryId == animeCat.CategoryId)?.Name)
-                .ToList();
-            var animevm = new Animevm
-            {
-                AnimeId = anime.AnimeId,
-                AnimeName = anime.Name,
-                ImageFileName = anime.ImageFileName,
-                Episode = anime.Episode,
-                CategoryName = string.Join(",", categoryName),
-                CurrentPage = 1,
-                TotalPages = 10,
-            };
-            animevmList.Add(animevm);
-        }
+    //         var categoryName = anime.AnimeCategories
+    //             .Select(animeCat => categoryList.FirstOrDefault(catId => catId.CategoryId == animeCat.CategoryId)?.Name)
+    //             .ToList();
+    //         var animevm = new Animevm
+    //         {
+    //             AnimeId = anime.AnimeId,
+    //             AnimeName = anime.Name,
+    //             ImageFileName = anime.ImageFileName,
+    //             Episode = anime.Episode,
+    //             CategoryName = string.Join(",", categoryName),
+    //             CurrentPage = 1,
+    //             TotalPages = 10,
+    //         };
+    //         animevmList.Add(animevm);
+    //     }
 
 
-        return View(animevmList);
+    //     return View(animevmList);
 
-    }
+    // }
 
     // public SelectList GetCategoryOptions()
     // {

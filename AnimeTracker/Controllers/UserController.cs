@@ -37,6 +37,13 @@ public class UserController : Controller
   [HttpGet]
     public IActionResult Login()
     {
+
+
+        if (HttpContext.Session.GetString("UserName") != null){
+            RedirectToAction("UserProfile");
+        }
+
+
         if (HttpContext.Session.GetString("UserName") == null)
         {
             return View();
@@ -51,7 +58,7 @@ public class UserController : Controller
                 .Select(a => a.UserId).FirstOrDefault();
             var userRole = _users.Find(userId).Role;
 
-            if (userRole == "user")
+            if (userRole == "admin")
             {
                 return RedirectToAction("Index","Home", new { area = "Anime" });
 
@@ -69,7 +76,7 @@ public class UserController : Controller
     [HttpPost]
     public ActionResult Login(UserVm vm)
     {
-        if (HttpContext.Session.GetString("UserName") == null)
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserName")))
         {
             // if (ModelState.IsValid)
             // {
@@ -113,12 +120,16 @@ public class UserController : Controller
       [HttpGet]
     public IActionResult SignUp()
     {
+         if (HttpContext.Session.GetString("UserName") != null){
+            RedirectToAction("UserProfile");
+        }
         return View();
     }
 
     [HttpPost]
     public IActionResult SignUp(UserVm vm)
     {
+
         if (ModelState.IsValid)
         {
             var userWithUsername = _users.List().FirstOrDefault(u => u.UserEmail == vm.UserEmail);
@@ -159,7 +170,7 @@ public class UserController : Controller
                 UserPassword = vm.UserPassword,
                 UserName = vm.UserName,
                 FullName = vm.UserFullName,
-                Role = "admin"
+                Role = "user"
                 
             };
             _users.Insert(userProfile);

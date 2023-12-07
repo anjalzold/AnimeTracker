@@ -85,6 +85,22 @@
           }
         }
       },
+      "F23.StringSimilarity/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/F23.StringSimilarity.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/F23.StringSimilarity.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -2391,6 +2407,15 @@
           }
         }
       },
+      "StringSimilarity/1.0.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/StringSimilarity.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/StringSimilarity.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4069,6 +4094,20 @@
         "lib/netstandard2.1/Castle.Core.dll",
         "lib/netstandard2.1/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "F23.StringSimilarity/6.0.0": {
+      "sha512": "kzEjznD9nAOep+E3LGIMD6mIAc+xEAJ91ds633+PxrBHs6i0ly6AI7v98B8ueTkKnYufFt/W0lytkoa+k7/d8w==",
+      "type": "package",
+      "path": "f23.stringsimilarity/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "f23.stringsimilarity.6.0.0.nupkg.sha512",
+        "f23.stringsimilarity.nuspec",
+        "lib/netstandard2.0/F23.StringSimilarity.dll",
+        "lib/netstandard2.0/F23.StringSimilarity.xml",
+        "logo.png"
       ]
     },
     "Humanizer/2.14.1": {
@@ -7508,6 +7547,22 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "StringSimilarity/1.0.2.1": {
+      "sha512": "DAF/8Wvfjs6D5VAkjOqcs/lJvliiBC8NL8u5w+RFRSehjF+FTAe6w+wis17w9XulcwhPKsrP1Y1nSB7/TJg35w==",
+      "type": "package",
+      "path": "stringsimilarity/1.0.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/StringSimilarity.dll",
+        "lib/net5.0/StringSimilarity.dll",
+        "lib/net6.0/StringSimilarity.dll",
+        "lib/netcoreapp3.1/StringSimilarity.dll",
+        "lib/netstandard2.1/StringSimilarity.dll",
+        "stringsimilarity.1.0.2.1.nupkg.sha512",
+        "stringsimilarity.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -11515,11 +11570,13 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "AspNetCoreHero.ToastNotification >= 1.1.0",
+      "F23.StringSimilarity >= 6.0.0",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Proxies >= 7.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.10",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.10"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.10",
+      "StringSimilarity >= 1.0.2.1"
     ]
   },
   "packageFolders": {
@@ -11564,6 +11621,10 @@
             "target": "Package",
             "version": "[1.1.0, )"
           },
+          "F23.StringSimilarity": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
             "target": "Package",
             "version": "[7.0.10, )"
@@ -11585,6 +11646,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[7.0.10, )"
+          },
+          "StringSimilarity": {
+            "target": "Package",
+            "version": "[1.0.2.1, )"
           }
         },
         "imports": [

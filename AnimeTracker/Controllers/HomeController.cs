@@ -55,12 +55,6 @@ public class HomeController : Controller
         }
 
         
-        
-        
-
-      
-        
-        
         var animeList = new List<Animevm>();
 
        
@@ -190,7 +184,7 @@ public class HomeController : Controller
         var animes = _animeRepository.Find(id);
         var cat = _categoryRepository.List();
 
-        var average = _userAnimeStatus.List().Where(a => a.AnimeId == id).Select(a => a.UserAnimeList).Select(a=>a.TotalRatings).Average();
+        var average = _userAnimeStatus.List().Where(a => a.AnimeId == id).Select(a => a.UserAnimeList).Select(a=>a.TotalRatings).DefaultIfEmpty(0).Average();
 
         var animeRate = _animeRepository.List().Where(a => a.AnimeId == id).Select(a => a.AverageRating).FirstOrDefault();
 
@@ -244,12 +238,12 @@ var userAnimeStatusInfo = _userAnimeStatus.List()
     .ToList();
 
 
-List<(string UserName, string Comment)> commentDetails = new List<(string, string)>();
+List<(string UserName, string Comment,DateTime dateTime)> commentDetails = new List<(string, string,DateTime)>();
 
 if (animes != null)
 {
       var commentId = animes.Comments
-        .Select(comment => (comment.User.UserName, comment.CommentText))
+        .Select(comment => (comment.User.UserName, comment.CommentText,comment.CommentDate))
         .ToList();
 
     commentDetails.AddRange(commentId);
@@ -290,6 +284,8 @@ if (animes != null)
                 list.Comment = "";
                 list.users = commentUser;
                 list.CommentDetails = commentDetails;
+                list.Description = animes.Description;
+                list.Type = animes.Type;
                 return View(list);
             }
         }
@@ -314,7 +310,8 @@ if (animes != null)
             Comment = "",
             users = commentUser,
             UserName = username,
-            CommentDetails = commentDetails
+            CommentDetails = commentDetails,
+            Type = animes.Type
 
 
         };
@@ -348,6 +345,8 @@ int average = vm.TotalRatings;
 
             var existingUserAnimeList = _userAnimeList.List()
                 .FirstOrDefault(u => u.UserAnimeStatus.Any(ui => ui.UserId == vm.UserId && ui.AnimeId == vm.AnimeId));
+
+            
 
             if (existingUserAnimeList != null)
             {
@@ -521,6 +520,9 @@ public ActionResult AddComment(UserAnimeVm vm)
         return View("Error");
         
     }
+
+
+
 
   
 

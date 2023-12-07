@@ -16,7 +16,7 @@ public class UserAnimeVm
 
     public string Comment { get; set; }
 
-        public List<(string UserName, string Comment)> CommentDetails { get; set; }
+        public List<(string UserName, string Comment,DateTime dateTime)> CommentDetails { get; set; }
 
 
 

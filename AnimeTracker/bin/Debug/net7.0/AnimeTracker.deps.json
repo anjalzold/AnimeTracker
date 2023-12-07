@@ -36,11 +36,13 @@
       "AnimeTracker/1.0.0": {
         "dependencies": {
           "AspNetCoreHero.ToastNotification": "1.1.0",
+          "F23.StringSimilarity": "6.0.0",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "7.0.10",
           "Microsoft.EntityFrameworkCore.Proxies": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.10",
+          "StringSimilarity": "1.0.2.1",
           "Microsoft.AspNetCore.Antiforgery": "7.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "7.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "7.0.0.0",
@@ -416,6 +418,20 @@
         },
         "compile": {
           "lib/net6.0/Castle.Core.dll": {}
+        }
+      },
+      "F23.StringSimilarity/6.0.0": {
+        "dependencies": {
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/F23.StringSimilarity.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/F23.StringSimilarity.dll": {}
         }
       },
       "Humanizer/2.14.1": {
@@ -2284,6 +2300,17 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "StringSimilarity/1.0.2.1": {
+        "runtime": {
+          "lib/net6.0/StringSimilarity.dll": {
+            "assemblyVersion": "1.0.2.1",
+            "fileVersion": "1.0.2.1"
+          }
+        },
+        "compile": {
+          "lib/net6.0/StringSimilarity.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -4911,6 +4938,13 @@
       "path": "castle.core/5.1.0",
       "hashPath": "castle.core.5.1.0.nupkg.sha512"
     },
+    "F23.StringSimilarity/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kzEjznD9nAOep+E3LGIMD6mIAc+xEAJ91ds633+PxrBHs6i0ly6AI7v98B8ueTkKnYufFt/W0lytkoa+k7/d8w==",
+      "path": "f23.stringsimilarity/6.0.0",
+      "hashPath": "f23.stringsimilarity.6.0.0.nupkg.sha512"
+    },
     "Humanizer/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -5890,6 +5924,13 @@
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "StringSimilarity/1.0.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DAF/8Wvfjs6D5VAkjOqcs/lJvliiBC8NL8u5w+RFRSehjF+FTAe6w+wis17w9XulcwhPKsrP1Y1nSB7/TJg35w==",
+      "path": "stringsimilarity/1.0.2.1",
+      "hashPath": "stringsimilarity.1.0.2.1.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

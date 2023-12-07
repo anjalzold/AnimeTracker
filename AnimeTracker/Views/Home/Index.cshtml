@@ -98,8 +98,7 @@
 
 
 <section class="hero">
-    <partial name="_HeroPage" model="@Model"></partial>
-
+@Html.Partial("_HeroPage", Model)
 
 
 
@@ -130,6 +129,8 @@
     @*         </div> *@
     @*     </div> *@
 </section>
+
+
 
 <div class="container">
     <div class="row">
@@ -185,9 +186,12 @@
                             <div class="trending__product">
                                 <div class="row">
                                     <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <div class="section-title">
+                                         @if (Model.Any(item => item.Type == "Anime"))
+                                        {
+                                            <div class="section-title">
                                             <h4> Anime List</h4>
-                                        </div>
+                                        </div>  
+                                        }
                                     </div>
                                 </div>
                                 <div class="row">
@@ -205,10 +209,10 @@
                                                         </div>
                                                     </div>
                                                     <div class="product__item__text">
-                                                        <ul>
+                                                        @* <ul>
                                                             <li>@animeinfo.Type</li>
-                                                        </ul>
-                                                        <h5>
+                                                        </ul> *@
+                                                        <h5 class="text-white fw-bold" style="font-weight: bold; font-size: 18px;">
                                                             @animeinfo.AnimeName
                                                         </h5>
                                                     </div>
@@ -235,15 +239,20 @@
                             <div class="trending__product">
                                 <div class="row">
                                     <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <div class="section-title">
+                                         @if (Model.Any(item => item.Type == "Manga"))
+                                        {
+                                            <div class="section-title">
                                             <h4> Manga List</h4>
-                                        </div>
+                                        </div>  
+                                        }
                                     </div>
                                 </div>
                                 <div class="row">
                                     @foreach (var mangaInfo in Model.Where(item => item.Type == "Manga"))
                                     {
                                         <div class="col-lg-4 col-md-6 col-sm-6">
+                                                                                        <a asp-route-id="@mangaInfo.AnimeId" asp-controller="Home" asp-action="AnimeDetail">
+
                                             <div class="product__item">
                                                 <div class="product__item__pic set-bg" data-setbg="/images/@mangaInfo.ImageFileName">
                                                     <div class="ep">@mangaInfo.Episode</div>
@@ -253,14 +262,16 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__item__text">
-                                                    <ul>
+                                                    @* <ul>
                                                         <li>@mangaInfo.Type</li>
-                                                    </ul>
-                                                    <h5>
-                                                        <a asp-route-id="@mangaInfo.AnimeId" asp-controller="Home" asp-action="AnimeDetail">@mangaInfo.AnimeName</a>
-                                                    </h5>
+                                                    </ul> *@
+                                                       <h5 class="text-white fw-bold" style="font-weight: bold; font-size: 18px;">
+                                                            @mangaInfo.AnimeName
+                                                        </h5>
                                                 </div>
                                             </div>
+                                                                                            </a>
+
                                         </div>
                                     }
                                 </div>
@@ -270,6 +281,10 @@
                 </div>
             </section>
 
+
+
+                                 
+
             <section class="product spad">
                 <div class="container">
                     <div class="row">
@@ -277,15 +292,23 @@
                             <div class="trending__product">
                                 <div class="row">
                                     <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <div class="section-title">
+                                        @if (Model.Any(item => item.Type == "Movie"))
+                                        {
+                                            <div class="section-title">
                                             <h4> Movie List</h4>
-                                        </div>
+                                        </div>  
+                                        }
+
+                                      
                                     </div>
                                 </div>
                                 <div class="row">
                                     @foreach (var movieInfo in Model.Where(item => item.Type == "Movie"))
                                     {
                                         <div class="col-lg-4 col-md-6 col-sm-6">
+                                                                                                                                    <a asp-route-id="@movieInfo.AnimeId" asp-controller="Home" asp-action="AnimeDetail">
+
+                                            
                                             <div class="product__item">
                                                 <div class="product__item__pic set-bg" data-setbg="/images/@movieInfo.ImageFileName">
                                                     <div class="ep">@movieInfo.Episode</div>
@@ -298,11 +321,12 @@
                                                     <ul>
                                                         <li>@movieInfo.Type</li>
                                                     </ul>
-                                                    <h5>
-                                                        <a asp-route-id="@movieInfo.AnimeId" asp-controller="Home" asp-action="AnimeDetail">@movieInfo.AnimeName</a>
-                                                    </h5>
+                                                       <h5 class="text-white fw-bold" style="font-weight: bold; font-size: 18px;">
+                                                            @movieInfo.AnimeName
+                                                        </h5>
                                                 </div>
                                             </div>
+                                            </a>
                                         </div>
                                     }
                                 </div>

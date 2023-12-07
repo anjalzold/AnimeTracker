@@ -1,8 +1,10 @@
 @model List<AnimeTracker.Areas.Anime.Models.Animevm>
 
+
+
+
 <div class="container">
-    <div class="hero__slider owl-carousel" 
-    >
+    <div class="hero__slider owl-carousel">
         @foreach (var ani in Model.Take(3))
         {
             <div class="hero__items set-bg" data-setbg="/images/@ani.ImageFileName" style="background-position: center;">
@@ -12,19 +14,17 @@
                             @foreach (var a in ani.category)
                             {
                                 <div class="label">@a</div>
-              
+
                             }
                             <h2>@ani.AnimeName</h2>
                             <p>@ani.Description</p>
-                            <a asp-route-id="@ani.AnimeId" asp-controller="Home" asp-action="AnimeDetail"><span>Read More</span> <i class="fa fa-angle-right"></i></a>
+                            <a asp-route-id="@ani.AnimeId" asp-controller="Home" asp-action="AnimeDetail"><span>Read
+                                    More</span> <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         }
-           
+
     </div>
 </div>
-
-
-

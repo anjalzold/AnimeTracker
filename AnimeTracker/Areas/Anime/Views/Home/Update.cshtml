@@ -1,4 +1,3 @@
-
 @{
     Layout = "_Layout";
 }
@@ -9,11 +8,13 @@
 
 <div class="m-5 bg-white p-5 w-50 w-[1200px] mx-auto" id="exampleModal">
     <p class="text-center">Update Anime Details</p>
-    <form method="post" asp-area="Anime" asp-controller="Home" asp-action="Update" enctype="multipart/form-data" class="px-4">
+    <form method="post" asp-area="Anime" asp-controller="Home" asp-action="Update" enctype="multipart/form-data"
+        class="px-4">
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Name</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" asp-for="AnimeName"/>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name"
+                asp-for="AnimeName" />
         </div>
 
         <div class="form-group mb-4">
@@ -25,11 +26,19 @@
                 }
             </select>
         </div>
-        
+
         <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Description</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" asp-for="Description"/>
-            </div>
+            <label for="exampleFormControlInput1" class="form-label">Description</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name"
+                asp-for="Description" />
+        </div>
+
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Episode / Chapter</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Total Episode"
+                asp-for="Episode" />
+        </div>
 
         <div class="form-group mb-4">
             <label class="mb-2">Type:</label>
@@ -43,10 +52,8 @@
         <div class="mb-3">
             <label for="imageFile" class="mb-2">Change Image</label>
 
-            <input type="file" class="form-control" id="imageFile" name="ImageFile"/>
+            <input type="file" class="form-control" id="imageFile" name="ImageFile" />
         </div>
-        <input type="submit"/>
+        <input type="submit" />
     </form>
 </div>
-
-

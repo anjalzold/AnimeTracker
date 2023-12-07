@@ -13,16 +13,16 @@
 
 
 <!-- Main Content Container (800px width) -->
-<div class="container mt-4">
-    <div class="row">
+@* <div class="container mt-4">
+    <div class="row"> *@
         <!-- Left Side (Image and Select Box) -->
-        <div class="col-md-4">
+        @* <div class="col-md-4">
             <img src="~/images/@Model.Image" alt="Anime Image" class="object-fit-cover" style="object-fit: cover"
                 height="400" width="400">
             @if (Model.UserId != Guid.Empty)
             @* @if (Model.AnimeId != Guid.Empty) *@
 
-            {
+            @* {
                 <div class="mt-3 mb-4">
                     <div class="p-0 py-2 px-2  " style="">
                         <form asp-controller="Home" asp-action="AnimeDetail" method="post" class="" id="animeDetailForm"
@@ -94,16 +94,16 @@
                             @* $1$ <label asp-for="Status">Status</label> #1# *@
                             @* *@
                             @* </div> *@
-                        </form>
+                        @* </form>
                     </div>
 
                 </div>
             }
 
-        </div>
+        </div>  *@
 
         <!-- Right Side (Anime Name, Episode, Description) -->
-        <div class="col-md-8 text-white">
+        @* <div class="col-md-8 text-white">
             @if(Model.AnimeName != null){
             <h2>@Model.AnimeName.ToUpper()</h2>
 
@@ -139,27 +139,231 @@
             </div>
         </div>
     </div>
+      </div> *@
 
-  <form asp-controller="Home" asp-action="AddComment" method="post">
+@* @if(Model.UserId != Guid.Empty){
+      <form asp-controller="Home" asp-action="AddComment" method="post">
     <input type="hidden" asp-for="AnimeId" />
     <input type="hidden" asp-for="UserId" />
     <input type="hidden" asp-for="UserName" />
     <textarea  asp-for="Comment"></textarea>
     <input type="submit" value="Add Comment">
 </form>
+} *@
+
+
+<section class="anime-details spad">
+    <div class="container">
+      <div class="anime__details__content">
+        <div class="row">
+          <div class="col-lg-3">
+            <div
+              class="anime__details__pic set-bg"
+              data-setbg="/images/@Model.Image"
+            >
+              <div class="comment"><i class="fa fa-comments"></i> @foreach(var a in Model.CommentDetails.Take(1)){
+                @a.Comment
+                }</div>
+              <div class="view"><i class="fa fa-eye"></i> @Model.ViewCount</div>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="anime__details__text">
+              <div class="anime__details__title">
+                <h3>@Model.AnimeName</h3>
+                @* <span>フェイト／ステイナイト, Feito／sutei naito</span> *@
+              </div>
+              @* <div class="anime__details__rating">
+                <div class="rating">
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star-half-o"></i></a>
+                </div>
+                <span>2.029.199 Votes</span>
+              </div> *@
+              <p>
+                @Model.Description
+              </p>
+              <div class="anime__details__widget">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6">
+                    <ul>
+                      <li><span>Type:</span> @Model.Type</li>
+                          <li><span>Rating:</span> @Model.Ratings</li>
+                      <li><span>Duration:</span> 24 min/ep</li>
+                                            <li>
+                                              
+                                              @if(Model.Type == "Manga"){
+                                              <span>Total Chapter:</span> 
+
+                                              }
+                                              else{
+                                                                                            <span>Total Episode:</span> 
+
+                                              }
+
+                                              
+                                              
+                                              
+                                              @Model.TotalEpisode</li>
+
+                      @* <li><span>Studios:</span> Lerche</li> *@
+                      @* <li><span>Date aired:</span> Oct 02, 2019 to ?</li> *@
+                      @* <li><span>Status:</span> Airing</li> *@
+                      <li>
+                        <span>Genre:</span>  @if(Model.category != null){
+                    @foreach (var a in Model.category)
+                    {
+                        <a asp-route-categoryName="@a" asp-controller="Home" asp-action="Category" style="text-decoration: none;color: white;">@a</a>
+                    }
+                    }
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <ul>
+                      @* <li><span>Scores:</span> 7.31 / 1,515</li> *@
+                  
+                      <li><span>Quality:</span> HD</li>
+                      <li><span>Views:</span> @Model.ViewCount</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="anime__details__btn ">
+                @* <a href="#" class="follow-btn"
+                  ><i class="fa fa-heart-o"></i> Follow</a
+                >
+                <a href="#" class="watch-btn"
+                  ><span>Watch Now</span> <i class="fa fa-angle-right"></i
+                ></a> *@
+
+
+@if (Model.UserId != Guid.Empty)
+{
+    <div class="mt-3 mb-4">
+        <div class="p-0 py-2 px-2" style="max-width: 700px; ">
+            <form asp-controller="Home" asp-action="AnimeDetail" method="post" class="d-flex flex-wrap" id="animeDetailForm">
+
+                <input type="hidden" asp-for="AnimeId" />
+                <input type="hidden" asp-for="UserId" />
+
+                   <div class="mr-3">
+                    @* <label for="status" class="text-white pr-2">Status:</label> *@
+                    <select asp-for="Status" asp-items="Html.GetEnumSelectList<Status>()" class="border-0  bg-danger text-white"> 
+                        @if (Html.GetEnumSelectList<Status>() == null)
+                        {
+                            <option class="bg-danger text-white" style=""> Select Status </option>
+                        }
+                    </select>
+          
+                </div>
+
+                <div class="mr-3">
+                    <label for="ratings" class="text-white pr-2 ">Rate this anime:</label>
+                    <input type="number" id="ratings" min="0" max="10" asp-for="TotalRatings" class="border-0 p-2  bg-danger text-white" />
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <label for="episodeInput" class="text-white pr-2">Episode:</label>
+                    <input asp-for="Episode" type="number" max="@Model.TotalEpisode" class="border-0 p-2  bg-danger text-white" style="width: 60px" id="episodeInput" aria-describedby="total-episode" />
+                    @if(Model.TotalEpisode != 0)
+                    {
+                        <span class=" p-2 bg-danger text-white" style="margin-left: -1px;">/@Model.TotalEpisode</span>
+                    }
+                </div>
+
+             
+
+                <button type="submit" class="btn btn-primary ml-3  bg-danger text-white">Set</button>
+
+            </form>
+        </div>
+    </div>
+}
 
 
 
-@if(Model.CommentDetails != null){
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 40px;">
+        <div class="col-lg-8 col-md-8">
+          <div class="anime__details__review">
+            <div class="section-title">
+              <h5>Reviews</h5>
+            </div>
+          
+
+          @if(Model.CommentDetails != null){
+
 
     @foreach (var commentDetail in Model.CommentDetails)
 {
-    <div class="comment">
+    <div class="anime__review__item">
+              <div class="anime__review__item__pic">
+                <img src="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png" style="background-color: white;" alt="" />
+              </div>
+              <div class="anime__review__item__text">
+                        <h6>@commentDetail.UserName - <span>@commentDetail.dateTime</span></h6>
+
+                <p>@commentDetail.Comment</p>
+              </div>
+            </div>
+
+}
+
+    }
+            
+        
+          </div>
+
+
+            @if(Model.UserId != Guid.Empty){
+
+          <div class="anime__details__form">
+            <div class="section-title">
+              <h5>Your Comment</h5>
+            </div>
+      <form asp-controller="Home" asp-action="AddComment" method="post">
+           <input type="hidden" asp-for="AnimeId" />
+    <input type="hidden" asp-for="UserId" />
+    <input type="hidden" asp-for="UserName" />
+    <textarea  asp-for="Comment"></textarea>
+              <button type="submit">
+                <i class="fa fa-location-arrow"></i> Review
+              </button>
+            </form>
+
+          </div>
+        }
+
+        </div>
+          
+          </div>
+    </div>
+  </section>
+
+ 
+      
+
+
+@* @if(Model.CommentDetails != null){
+    <h3 class="text-white mt-4">Comments</h3>
+
+    @foreach (var commentDetail in Model.CommentDetails)
+{
+    <div class="comment mt-3">
         <p style="color: white;"><strong>@commentDetail.UserName:</strong> @commentDetail.Comment</p>
     </div>
 }
 
-    }
+    } *@
 
 
 
@@ -168,7 +372,6 @@
 
 
 
-</div>
 
 
 @* <script>
