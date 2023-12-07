@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Jc33v6Bbyo2uhcRvuzWO9iB7FL/VgXhqnZuFGbk0Gf4=",
+  "Hash": "9fqb5MctMxvYrDI829w4syl4WZGhSop+1T57NzFoZ7Q=",
   "Source": "AnimeTracker",
   "BasePath": "_content/AnimeTracker",
   "Mode": "Default",
@@ -1953,6 +1953,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/49470dc1-3b97-45ae-9db1-e93d1947c045art.jpeg"
+    },
+    {
+      "Identity": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/55ac8126-539d-481a-b23c-dac2f43719f5narutoo.jpg",
+      "SourceId": "AnimeTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/",
+      "BasePath": "_content/AnimeTracker",
+      "RelativePath": "images/55ac8126-539d-481a-b23c-dac2f43719f5narutoo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/55ac8126-539d-481a-b23c-dac2f43719f5narutoo.jpg"
     },
     {
       "Identity": "/Users/anjal/RiderProjects/AnimeTracker/AnimeTracker/wwwroot/images/6ebb9a41-9c5b-4d49-a923-0c843e7e82b9AJ-Styles-ROH-NJPW-Cropped.jpg",
