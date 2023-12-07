@@ -6,6 +6,12 @@
 }
 
 
+@{
+    var pageTitle = ViewBag.Title as string ?? "Anime";
+}
+
+
+
 <!DOCTYPE html>
 
 <html
@@ -21,12 +27,12 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
 
-    <title>Dashboard </title>
+    <title>@pageTitle</title>
 
     <meta name="description" content=""/>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="~/Admin/assets/img/favicon/favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="https://static.thenounproject.com/png/3324336-200.png"/>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -241,7 +247,7 @@
 
             <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <!-- Place this tag where you want the button to render. -->
-                <li class="nav-item lh-1 me-3">
+                @* <li class="nav-item lh-1 me-3">
                     <a
                         class="github-button"
                         href="~/Admin/https://github.com/themeselection/sneat-html-admin-template-free"
@@ -251,7 +257,7 @@
                         aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">
                         Star
                     </a>
-                </li>
+                </li> *@
 
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">

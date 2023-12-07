@@ -43,6 +43,8 @@ public class HomeController : Controller
 
     public IActionResult Index(string search,string type,string cate)
     {
+                    ViewBag.Title = "Anime";
+
 
         try
         {
@@ -165,8 +167,13 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult AnimeDetail(Guid id)
     {
+
+
+
         
         var animeName = _animeRepository.Find(id);
+
+
         if(animeName!=null){
  animeName.ViewCount++;
         _animeRepository.Update(animeName);
@@ -409,6 +416,7 @@ int average = vm.TotalRatings;
     [HttpGet]
     public IActionResult Category(string categoryName)
     {
+
         // Your logic to fetch the list of anime for the given category
         var animeList = _categoryRepository.FindByName(categoryName);
         List<Animevm> a = new List<Animevm>();
@@ -497,6 +505,7 @@ public ActionResult AddComment(UserAnimeVm vm)
 
     public IActionResult CategoryPage()
     {
+
         List<Animevm> a = new List<Animevm>();
 
         var categoryNames = _categoryRepository.List();

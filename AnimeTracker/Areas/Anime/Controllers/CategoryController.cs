@@ -43,18 +43,22 @@ public class CategoryController : Controller
     [HttpPost]
     public IActionResult AddCategory(Animevm cm)
     {
+                    ViewBag.Title = "Add Category";
+
         var vm = new Category
         {
             Name = cm.CategoryName
         };
         _categoryRepository.Insert(vm);
 
-        return RedirectToAction("Index","Home");
+        return RedirectToAction("Add", "Home");
     }
 
     [HttpGet]
     public IActionResult GetCategory()
     {
+                    ViewBag.Title = "View Category";
+
         var categories = _categoryRepository.List();
 
         // Create an Animevm instance to hold the categories

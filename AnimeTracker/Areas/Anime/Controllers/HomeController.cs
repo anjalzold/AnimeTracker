@@ -44,6 +44,8 @@ public class HomeController : Controller
     [HttpGet]
 public IActionResult Index(string search, string type, string cate, string sortOrder)
 {
+                ViewBag.Title = "Dashboard";
+
     var animelist = _animeRepository.List();
     var categoryList = _categoryRepository.List();
     var animevmList = new List<Animevm>();
@@ -265,6 +267,9 @@ public IActionResult Index(string search, string type, string cate, string sortO
     [HttpGet]
     public IActionResult Add()
     {
+
+            ViewBag.Title = "Add";
+
         var categories = _categoryRepository.List();
         var categoryOptions = new SelectList(categories, nameof(Category.CategoryId), nameof(Category.Name));
      
@@ -333,6 +338,8 @@ public IActionResult Index(string search, string type, string cate, string sortO
     [HttpGet]
     public IActionResult Update(Guid id)
     {
+                    ViewBag.Title = "Update Anime";
+
         AnimeTracker.Models.Anime entity = _animeRepository.Find(id);
         if (entity == null)
         {

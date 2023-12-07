@@ -5,6 +5,11 @@
     string userName = HttpContextAccessor.HttpContext.Session.GetString("UserName");
 }
 
+@{
+    var pageTitle = ViewBag.Title as string ?? "Anime"; 
+}
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -14,7 +19,9 @@
     <meta name="keywords" content="Anime, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Anime | Template</title>
+    <title>Anime Tracker</title>
+        <link rel="icon" type="image/x-icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25f52e5e-495c-4514-8388-75f7598156e0/ded1t9d-d5256e47-41de-44ef-8811-7bfd02623f8e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI1ZjUyZTVlLTQ5NWMtNDUxNC04Mzg4LTc1Zjc1OTgxNTZlMFwvZGVkMXQ5ZC1kNTI1NmU0Ny00MWRlLTQ0ZWYtODgxMS03YmZkMDI2MjNmOGUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.F1UN28RmlXxSV-DPPMAKaj575VgA--Oz3-6IJrQOgb0"/>
+
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
